@@ -1,0 +1,182 @@
+<!DOCTYPE html> <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--> <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]--> <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]--> <!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]--> 
+<head> <meta charset="UTF-8"> 
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"> <title>Cao Yuchen</title> 
+    <meta name="description" content="Moon is a minimal, one column jekyll theme for your blog."> 
+    <!-- Twitter Cards --> 
+    <meta name="twitter:card" content="summary"> 
+    <meta name="twitter:image" content="./assets/img/logo.png"> 
+    <meta name="twitter:title" content="Home"> <meta name="twitter:site" content="@username"> 
+    <meta name="twitter:creator" content="@username"> 
+    <!-- Open Graph --> 
+    <meta property="og:locale" content="en_US"> 
+    <meta property="og:type" content="article"> 
+    <meta property="og:title" content="Home"> 
+    <meta property="og:url" content="http://caoyuchen.github.io"> 
+    <meta property="og:site_name" content="Moon"> 
+    <meta property="og:image" content="./assets/img/logo.png"> 
+    <link rel="canonical" href="http://caoyuchen.github.io"> 
+    <link href="./feed.xml" type="application/atom+xml" rel="alternate" title="Moon Feed"> 
+    <!-- Handheld -->
+    <meta name="HandheldFriendly" content="True"> 
+    <meta name="MobileOptimized" content="320"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- CSS --> 
+    <link rel="stylesheet" href="../assets/css/main.css"> 
+    <!-- JS --> 
+    <script src="../assets/js/modernizr-3.3.1.custom.min.js">   
+    </script> 
+    <!-- Favicons --> 
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-icon-precomposed.png"> 
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicons/apple-icon-72x72.png"> 
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicons/apple-icon-114x114.png"> 
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicons/apple-icon-144x144.png"> 
+    <link rel="shortcut icon" type="image/png" href="../favicon.png" /> 
+    <link rel="shortcut icon" href="../favicon.ico" /> 
+    <!-- Background Image --> 
+    <style type="text/css">body {background-image:url(../assets/img/background.jpg); background-repeat: no-repeat; background-size: cover; }</style> <!-- Post Feature Image --> </head> 
+    <body> <nav id="dl-menu" class="dl-menuwrapper" role="navigation"> 
+        <button class="dl-trigger">Open Menu</button> 
+        <ul class="dl-menu"> 
+        <li><a href="http://caoyuchen.github.io">Home</a></li> 
+        <li> <a href="../about">About</a></li> 
+        <li> <a href="../posts">Posts</a></li>  
+        </ul><!-- /.dl-menu --> </nav><!-- /.dl-menuwrapper --> 
+        <!-- Header --> 
+         <header class="header" role="banner"> 
+            <div class="wrapper animated fadeIn"> 
+                <div class="content"> 
+                    <div class="post-title"> <h1>Transformation of Different Types of C++ Variables</h1>  
+                        <h3>7 Mar 2018</h3> 
+                        <!-- /.entry-reading-time --> 
+                        <a class="btn zoombtn" href="./index.html"> <i class="fa fa-chevron-left"></i> </a>
+                    </div>
+
+<h2>const_cast&lt;&gt;()</h2>
+<p>transfer const to nonconst.</p>
+<pre>
+const *char a = "lalala";
+*char b = const_cast &lt const * char &gt(a);
+</pre>
+<h2>static_cast&lt;&gt;()</h2>
+<p>transfer nonconst to const; nonconst to nonconst.</p>
+<pre>
+char a = 'a';
+int b = static_cast<char>(a);//OK
+
+double *c = new double;
+void *d = static_cast<void*>(c);//OK
+
+int e = 10;
+const int f = static_cast<const int>(e);//OK
+
+const int g = 20;
+int *h = static_cast<int*>(&g);//Wrong!!
+</pre>
+<h2>reinterpret_cast&lt;&gt;()</h2>
+<p>transfer pointer to int and vice versa.</p>
+<pre>
+void *p;
+unsigned int val = reinterpret_cast<unsigned int>( p );
+</pre>
+<h2>const char* to char*</h2>
+<p>const char* points to both constants and varaibles, but it cannot change the data it points to.<br></p>
+<pre>
+const char* cpc="abcde";
+char* pc=new char[100];
+strcpy(pc,cpc); 
+</pre>
+<h2>char* to const char*</h2>
+<pre>
+char* pc = "abc";
+const char* cpc = pc;
+</pre>
+<h2>string to const char*</h2>
+<pre>
+string s = "abc";
+const char* c_s = s.c_str();
+</pre>
+<h2>const char* to string</h2>
+<pre>
+const char* c_s = "abc";
+string s(c_s);
+</pre>
+<h2>string to char*</h2>
+<pre>
+string s = "abc";
+char* c;
+const int len = s.length();
+c = new char[len+1];
+strcpy(c,s.c_str());
+</pre>
+<h2>char* to string</h2>
+<pre>
+char* c = "abc";
+string s(c);
+</pre>
+<h2>string and Wstring</h2>
+<pre>
+// wstring => string  
+std::string WString2String(const std::wstring& ws)  
+{  
+    std::string strLocale = setlocale(LC_ALL, "");  
+    const wchar_t* wchSrc = ws.c_str();  
+    size_t nDestSize = wcstombs(NULL, wchSrc, 0) + 1;  
+    char *chDest = new char[nDestSize];  
+    memset(chDest,0,nDestSize);  
+    wcstombs(chDest,wchSrc,nDestSize);  
+    std::string strResult = chDest;  
+    delete []chDest;  
+    setlocale(LC_ALL, strLocale.c_str());  
+    return strResult;  
+}  
+  
+// string => wstring  
+std::wstring String2WString(const std::string& s)  
+{  
+    std::string strLocale = setlocale(LC_ALL, "");   
+    const char* chSrc = s.c_str();  
+    size_t nDestSize = mbstowcs(NULL, chSrc, 0) + 1;  
+    wchar_t* wchDest = new wchar_t[nDestSize];  
+    wmemset(wchDest, 0, nDestSize);  
+    mbstowcs(wchDest,chSrc,nDestSize);  
+    std::wstring wstrResult = wchDest;  
+    delete []wchDest;  
+    setlocale(LC_ALL, strLocale.c_str());  
+    return wstrResult;  
+}  
+</pre>
+<h2>char and Wchar_t</h2>
+<pre>
+char * wchar2char(const wchar_t* wp ){
+   char * m_char;
+    int len= WideCharToMultiByte( CP_ACP ,0,wp ,wcslen( wp), NULL,0, NULL ,NULL ); 
+    m_char= new char[len+1]; 
+    WideCharToMultiByte( CP_ACP ,0,wp ,wcslen( wp),m_char,len, NULL ,NULL ); 
+    m_char[len]= '\0'; 
+    return m_char; 
+}
+wchar_t * char2wchar(const char* cp) 
+{ 
+    wchar_t *m_wchar;
+    int len = MultiByteToWideChar( CP_ACP ,0,cp ,strlen( cp), NULL,0); 
+    m_wchar= new wchar_t[len+1]; 
+    MultiByteToWideChar( CP_ACP ,0,cp ,strlen( cp),m_wchar,len); 
+    m_wchar[len]= '\0' ; 
+    return m_wchar; 
+}  
+</pre>
+
+
+  </div> </div> </header> 
+
+                     <!-- JS --> 
+                     <script src="https://taylantatli.github.io/Moon/assets/js/jquery-1.12.0.min.js"></script> 
+                     <script src="https://taylantatli.github.io/Moon/assets/js/jquery.dlmenu.min.js"></script> 
+                     <script src="https://taylantatli.github.io/Moon/assets/js/jquery.goup.min.js"></script> 
+                     <script src="https://taylantatli.github.io/Moon/assets/js/jquery.magnific-popup.min.js"></script> 
+                     <script src="https://taylantatli.github.io/Moon/assets/js/jquery.fitvid.min.js"></script> 
+                     <script src="https://taylantatli.github.io/Moon/assets/js/scripts.js"></script> 
+                     <script src="https://taylantatli.github.io/Moon/assets/js/wow.min.js"></script> 
+                     <script type="text/javascript">(new WOW).init();</script> 
+                    </body> </html>
