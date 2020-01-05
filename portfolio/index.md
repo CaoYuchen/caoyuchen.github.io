@@ -80,7 +80,9 @@ There are also some other websites that I made, you can check them here:
 
 ## Blender indoor rendering:  
 
-This is a realistic indoor renderning in Blender, I made it mainly for scientific dataset generation purpose, the render can be real time. 
+This is a realistic indoor renderning in Blender, I made it mainly for scientific dataset generation purpose, the render can be real time.  
+
+The main work includes 3D model building, accurate size, illumination, realistic camera setting, etc. You can view it below:  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3vrjjfpUNiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
