@@ -1,37 +1,36 @@
 ---
 layout: page
-title: About the Theme
-tags: [about, Jekyll, theme, moon]
-date: 2016-03-21
+title: About Me
+tags: [about]
+date: 2020-01-04
 comments: false
 ---
-    
-<center><a href="http://taylantatli.github.io/Moon"><b>Moon</b></a> is a minimal, one column jekyll theme.</center>
 
-## Features
-* Minimal, you can focus on your content
-* Responsive
-* Disqus integration
-* Syntax highlighting
-* Optional post image
-* Social icons
-* Page for sharing projects
-* Optional background image
-* Simple navigation menu
-* MathJax support
 
-## Preview
 
-{% capture images %}
-    https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png
-    https://cloud.githubusercontent.com/assets/754514/14509716/61ac6c8e-01d6-11e6-879f-8308883de790.png
-{% endcapture %}
-{% include gallery images=images caption="Screenshots of Moon Theme" cols=2 %}
+## Joshua Rain (Cao Yuchen) 
+ 
+Joshua Rain lives in Shanghai, while studying M.Sc. of Computer Science, he grew interested in media art and cinematic art, he studied game develop, screenwriting, graphic design, animation along the major research in SLAM and Machine Learning. He's aimed at becoming an entertainment engineer with knowledge in artical directing and technical developing.
 
-See a [live version of Moon](http://taylantatli.github.io/Moon) hosted on GitHub.
+**Education Background:**  
 
-## Getting Started
+2016.9-2019.7 &nbsp; M.Sc. in Computer Science, University of Chinese Academy of Sciences.  
+2012.9-2016.7 &nbsp; B.Eng. in Automation, China University of Petroleum.  
+2016.2-2016.6 &nbsp; Exchange Student, Konkuk University.  
 
-To learn how to install and use this theme check out the [Setup Guide](http://taylantatli.me/Moon/moon-theme/) for more information.
-      
-[Install Moon](https://github.com/TaylanTatli/Moon){: .btn}
+**Interested Area**  
+
+Computer Vision, SLAM, Computer Graphics, Machine Learning, Robotics, AR/VR/MR/XR, Deep Learning,  
+Game Design/Develop, Film Directing, Photography, Screenwriting, Graphics Design, 3D Animation
+
+
+**Contact Me:**
+ 
+Adress: No.199 Huanke Rd, Pudong New Area, Shanghai, China  
+Email: caoyuchen.joshua@gmail.com  
+Phone: (+86) 15763948851  
+
+Github: [https://github.com/CaoYuchen](https://github.com/CaoYuchen)  
+500Px: [https://500px.me/caoyuchen](https://500px.me/caoyuchen)  
+Instagram: [https://www.instagram.com/joshua_cyc]( https://www.instagram.com/joshua_cyc)
+	 
