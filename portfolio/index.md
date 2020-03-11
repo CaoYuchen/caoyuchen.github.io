@@ -9,7 +9,7 @@ comments: false
 
 ## Photography & Painting: 
 
-I used to be a part-time photographer for 2 years, my main focuses are tourism-propaganda landscapes and after-processed portraits. Being a great fan of Japanese animation, I sometimes draw characters in animation. Examples are like:
+I used to be a part-time photographer for 2 years, my main focuses are tourism-propaganda landscapes and after-processed portraits. Being a great fan of Japanese animation, I sometimes draw characters from animation. Examples are like:
 
 <center>
 {% capture images %}
@@ -18,7 +18,7 @@ I used to be a part-time photographer for 2 years, my main focuses are tourism-p
 {% include gallery images=images caption="Photos & Paintings Demo" cols=1 %} 
 </center>
 
-You can check more about my works in:  
+You can check more about my works at:  
 
 <a href="https://www.instagram.com/joshua_cyc" target="_blank" style="color:blue">https://www.instagram.com/joshua_cyc</a>  
 
@@ -28,13 +28,13 @@ You can check more about my works in:
 
 ## Directed Video:
 
-This is a short movie that I directed and shooted in a cooperated course conducted by University of Arts in London and ShanghaiTech University. My main work in this project mainly includes:  
+This is a short movie that I directed and shooted in a cooperated program conducted by University of Arts in London and ShanghaiTech University. My main contributions in this project mainly include:  
 
 - Screenwriter  
 - Director  
 - Cameraman  
 
-It's mainly made for propoganda of a concept product in the future --- Dreamatic goggles that helps people record and replay the dream. You can view it below:  
+It's mainly made for propoganda of a concept product in the future --- Dreamatic goggles that help people record and replay the dream. You can view it below:  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BuGByuTweKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -63,7 +63,7 @@ There are other two screenplays that I wrote, The Trace and The Last Journey, bu
 
 ## Website Design:  
 
-This is a set of English teaching tools that I made for EF Education First, Interactive White Borad(IWB), the main purpose is for children-oriented entertaining and interactive teaching. My main work includes:  
+This is a set of English teaching tools, Interactive White Borad(IWB), that I made for EF Education First, the main purpose of it is to assist children-oriented teaching in an entertaining and interactive way. My main contributions include:  
 
 - Design styles for children-oriented teaching
 - The entire programming of front-end
@@ -80,7 +80,7 @@ There are also some other websites that I made, you can check them here:
 
 ## Blender indoor rendering:  
 
-This is a realistic indoor renderning in Blender, I made it mainly for scientific dataset generation purpose, the render can be real time.  
+This is a realistic indoor renderning in Blender, I made it mainly for the purpose of scientific dataset generation, the rendering is real time.  
 
 The main work includes 3D model building, accurate size, illumination, realistic camera setting, etc. You can view it below:  
 
