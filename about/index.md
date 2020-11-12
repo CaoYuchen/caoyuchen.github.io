@@ -14,7 +14,7 @@ Joshua Rain lives in Shanghai, while studying M.Sc. of Computer Science, he grew
 
 **Education Background:**  
 
-2016.9-2020.7 &nbsp; M.Sc. in Computer Science, University of Chinese Academy of Sciences, Shanghai, China.  
+2016.9-2020.7 &nbsp; M.Sc. in Computer Science, University of Chinese Academy of Sciences & ShanghaiTech University, Shanghai, China.  
 2012.9-2016.7 &nbsp; B.Eng. in Automation, China University of Petroleum, Qingdao, China.  
 2016.2-2016.6 &nbsp; Exchange Student, Konkuk University, Seoul, South Korea.  
 
