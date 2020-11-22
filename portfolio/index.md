@@ -86,4 +86,6 @@ The main work includes 3D model building, accurate size, illumination, realistic
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3vrjjfpUNiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Derived from the real-time rendering work above, I also published the paper on <a href="https://www.mdpi.com/1424-8220/20/9/2572" target="_blank" style="color:blue">Sensors Journal</a>, the related website can be viewed at <a href="http://mpl.sist.shanghaitech.edu.cn/SSSBenchmark/SSS@MPL.html" target="_blank" style="color:blue">SSSBenchmark website</a>.
+
 
