@@ -6,6 +6,7 @@ description: # Add post description (optional)
 img: weaklyObject.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 keywords: Object Detection, Pytorch, Deep Learning, Computer Vision
+github: https://github.com/CaoYuchen/16824/tree/main/a1
 comments: false
 ---
 
