@@ -10,4 +10,4 @@ comments: false
 ---
 
 
-We Built the Husky ground-robot system with Velodyne-16 Lidar sensor, Xsens-IMU, a 2nd 2D lidar and RGB RealSense camera; We then configured the ROS system with AMCL, Gmapping, Dijkstra* and DWA for 2D-lidar SLAM and path planning, navigation while avoiding dynamic obstacles, this achieves a fundation for advanced research such as reinforcement learning, more accurate pedestrian detection, etc.
+We Built the Husky ground-robot system with Velodyne-16 Lidar sensor, Xsens-IMU, a 2nd 2D lidar and RGB RealSense camera, and most importantly, an on-board computing hardware with modern GPU; We then configured the ROS system with AMCL, Gmapping, Dijkstra* and DWA for 2D-lidar SLAM and path planning, navigation while avoiding dynamic obstacles, this achieves a fundation for advanced research such as reinforcement learning, more accurate pedestrian detection, etc. Besides, we managed to run 3D lidar-based SLAM algorithm in real time.  
