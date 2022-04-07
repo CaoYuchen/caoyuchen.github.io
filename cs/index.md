@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Art Portfolio"
-tags: [portfolio]
+title: "Computer Science"
+tags: [cs]
 date: 2020-01-04
 comments: false
 ---
@@ -97,7 +97,7 @@ Derived from the real-time rendering work above, I also published the paper on <
 
 # Game Development
 
-GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime" target="_blank" style="color:blue">Dr.Dox Quest For Time</a>. It's a puzzle game where Dr.Dox is a time traveller seeking for treasures but he has to be careful to not bump into himself in the past to avoid time paradox. My major role in this project: 
+GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime" target="_blank" style="color:blue">Dr.Dox Quest For Time</a>. My major role in this project: 
 
 - Game design 
 - Programming
@@ -109,7 +109,7 @@ GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime
 {% include gallery images=images caption="Dr.Dox Quest For Time Demo" cols=1 %}
 </center>  
 
-CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanced-Game-Studio-Game" target="_blank" style="color:blue">Forest</a>. This projects is a split-screen two players game, players need to cooperate together and communicate with each other offline while playing the daughter and father to solve puzzles, go through forest and hide from monsters, to finally let them meet in the game. My major role in this project:
+CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanced-Game-Studio-Game" target="_blank" style="color:blue">Forest</a>. My major role in this project:
 
 - Game Programmer
 - Sound Artist

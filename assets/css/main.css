@@ -318,7 +318,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.79);
     color: #282828;
     z-index: 1;
     border-radius: 3px;

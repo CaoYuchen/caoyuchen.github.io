@@ -1,12 +1,12 @@
 # Site
-title:              Joshua Rain(Cao Yuchen)
+title:              Joshua Rain(Yuchen Cao)
 bio:                'Computer Vision & Graphics, SLAM, ML, AR/VR, <br><br> Photography, Game Develop, Screenplay, Graphic Design.'
 description:        "Welcome! This is Joshua's personal website."
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
 profile:            'assets/img/CaoYuchen.jpg'
-background:         'assets/img/background.jpg'
+background:         'assets/img/IMG_02271.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://caoyuchen.github.io
@@ -47,7 +47,7 @@ email:              caoyuchen.joshua@gmail.com
 # facebook:           https://www.facebook.com/caoyuchen.joshua
 github-url:         CaoYuchen
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-linkedin:           yuchen-cao-022378117
+linkedin:           caoyuchenjoshuarain
 #xing:              username
 instagram:          joshua_cyc
 #lastfm:            username
