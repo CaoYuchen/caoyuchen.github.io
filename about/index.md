@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 tags: [about]
-date: 2020-01-04
+date: 2022-04-07
 comments: false
 ---
 
@@ -12,7 +12,7 @@ comments: false
  
 Joshua lives in Pittsburgh, and currently studys Computational Design in Carnegie Mellon University, he's interested in Deep Learning based Computer Vision and Computer Graphics, and related implementations in digital media art, entertainment industry. In the past, he finished a study of M.Sc. of Computer Science, he grew interested in media art and cinematic art, he studied game develop, screenwriting, graphic design, animation along the major research in SLAM and Machine Learning. He's aimed at becoming an entertainment engineer with knowledge in artical directing and technical developing.
 
-**Education Background:**  
+## Education Background  
 
 2021.9-2023.5 &nbsp; M.Sc. in Computational Design, Carnegie Mellon University, Pittsburgh, PA, U.S.
 
@@ -20,13 +20,13 @@ Joshua lives in Pittsburgh, and currently studys Computational Design in Carnegi
 
 2016.2-2016.6 &nbsp; Exchange Student, Konkuk University, Seoul, South Korea.  
 
-**Interested Area**  
+## Interested Area 
 
 Computer Vision, SLAM, Computer Graphics, Machine Learning, Deep Learning, Robotics, AR/VR/MR/XR,   
 Game Design/Develop, Film Directing, Photography, Screenwriting, Sound Design, 3D Animation
 
 
-**Contact Me:**
+## Contact Me
  
 Adress: Pittsburgh, PA, U.S.  
 Email: caoyuchen.joshua@gmail.com  

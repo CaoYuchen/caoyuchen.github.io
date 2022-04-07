@@ -2,7 +2,7 @@
 layout: page
 title: "Art Portfolio"
 tags: [portfolio]
-date: 2020-01-04
+date: 2022-04-07
 comments: false
 ---
 
@@ -83,7 +83,7 @@ There are also some other websites that I made, you can check them here:
 
 ***
 
-# Blender indoor rendering  
+# 3D Model & Animation 
 
 This is a realistic indoor renderning in Blender, I made it mainly for the purpose of scientific dataset generation, the rendering is real time.  
 

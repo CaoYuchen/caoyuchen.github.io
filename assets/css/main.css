@@ -75,7 +75,7 @@ dfn {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     margin: 0.67em 0
 }
 
@@ -361,9 +361,9 @@ body {
 
 .wrapper {
     width: 75%;
-    max-width: 850px;
+    max-width: 1300px;
     margin: 4rem auto;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
     color: #383838;
     padding: 2em;
     border-radius: 3px;
@@ -545,7 +545,7 @@ header .entry-meta {
 
 .content {
     font-size: 14px;
-    font-size: .875rem;
+    font-size: 1.2rem;
     line-height: 1.8571;
     margin-bottom: 26px;
     margin-bottom: 1.625rem;
@@ -822,7 +822,7 @@ hr {
     border: 0;
     height: 1px;
     opacity: .8;
-    margin: 1em 0;
+    margin: 3em 0 5em 0;
     background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
@@ -832,8 +832,9 @@ hr {
 hr.hr-line {
     border: 0;
     height: 1px;
+    margin-bottom: 10px;
     opacity: .15;
-    margin: 1em 0;
+    margin: 3em 0 5em 0;
     background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);

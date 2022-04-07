@@ -2,7 +2,7 @@
 layout: page
 title: "Computer Science"
 tags: [cs]
-date: 2020-01-04
+date: 2022-04-07
 comments: false
 ---
 
