@@ -13,9 +13,14 @@ I used to be a part-time photographer for 2 years, my main focuses are tourism-p
 
 <center>
 {% capture images %}
+	{{ site.url }}/assets/img/photography.jpg
+{% endcapture %}
+{% include gallery images=images caption="Photos & Paintings Demo1" cols=1 %} 
+
+{% capture images %}
 	{{ site.url }}/assets/img/photos.jpg
 {% endcapture %}
-{% include gallery images=images caption="Photos & Paintings Demo" cols=1 %} 
+{% include gallery images=images caption="Photos & Paintings Demo2" cols=1 %} 
 </center>
 
 You can check more about my works at:  
@@ -87,5 +92,35 @@ The main work includes 3D model building, accurate size, illumination, realistic
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3vrjjfpUNiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Derived from the real-time rendering work above, I also published the paper on <a href="https://www.mdpi.com/1424-8220/20/9/2572" target="_blank" style="color:blue">Sensors Journal</a>, the related website can be viewed at <a href="http://mpl.sist.shanghaitech.edu.cn/SSSBenchmark/SSS@MPL.html" target="_blank" style="color:blue">SSSBenchmark website</a>.
+
+***
+
+## Game Development
+
+GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime" target="_blank" style="color:blue">Dr.Dox Quest For Time</a>. My major role in this project: 
+
+- Game design 
+- Programming
+
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/DrDox.png
+{% endcapture %}
+{% include gallery images=images caption="Dr.Dox Quest For Time Demo" cols=1 %}
+</center>  
+
+CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanced-Game-Studio-Game" target="_blank" style="color:blue">Forest</a>. My major role in this project:
+
+- Game Programmer
+- Sound Artist
+- Game Designer
+- 3D Artist
+
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/Forest.jpg
+{% endcapture %}
+{% include gallery images=images caption="Forest Demo" cols=1 %}
+</center>
 
 
