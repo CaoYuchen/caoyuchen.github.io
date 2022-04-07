@@ -15,7 +15,9 @@ Joshua Rain lives in Pittsburgh, and currently studys Computational Design in Ca
 **Education Background:**  
 
 2021.9-2023.5 &nbsp; M.Sc. in Computational Design, Carnegie Mellon University, Pittsburgh, PA, U.S.
+
 2016.9-2020.7 &nbsp; M.Sc. in Computer Science, University of Chinese Academy of Sciences & ShanghaiTech University, Shanghai, China. 
+
 2016.2-2016.6 &nbsp; Exchange Student, Konkuk University, Seoul, South Korea.  
 
 **Interested Area**  
