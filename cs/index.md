@@ -7,83 +7,94 @@ comments: false
 ---
 
 
-# Photography & Sketch 
+# Deep & Machine Learning 
 
-I used to be a part-time photographer for 2 years, my main focuses are tourism-propaganda landscapes and after-processed portraits. Being a great fan of Japanese animation, I sometimes draw characters from animation. Examples are like:
+### Poisson Blending
+The project explores the gradient-domain processing in the practice of image blending, tone mapping and non-photorealistic rendering. The method mainly focuses on the Poisson Blending algorithm. The tasks include primary gradient minimization, 4 neighbours based Poisson blending, mixed gradient Poisson blending and grayscale intensity preserved color2gray method. The whole project is implemented in Python. The detail implementation can be viewed here <a href="https://github.com/CaoYuchen/16726/tree/main/a2" target="_blank" style="color:blue">https://github.com/CaoYuchen/16726/tree/main/a2</a>, and the related <a href="https://www.andrew.cmu.edu/course/16-726-sp22/projects/yuchenca/proj2/index.html" target="_blank" style="color:blue">website</a>.
 
 <center>
 {% capture images %}
-	{{ site.url }}/assets/img/photography.jpg
+	{{ site.url }}/assets/img/Poisson-Blending.jpg
 {% endcapture %}
-{% include gallery images=images caption="Photos & Paintings Demo1" cols=1 %} 
+{% include gallery images=images caption="Poisson Blending Demo" cols=1 %}
+</center> 
 
+### CycleGAN
+This project implements two famous GAN architecture: DCGAN and CycleGAN. It is programmed in Pytorch, the major code includes the build-up of discriminator and generator neural network, loss function, forward and backward propagations. It also explores different methods that help GAN generate better results, such as Data Agumentation, Differentiable Augmentation, variance of different lose functions, variance of different discriminators, and implemented in different dataset to check the robustness fo the network. The detail implementation can be viewed here <a href="https://github.com/CaoYuchen/16726/tree/main/a3" target="_blank" style="color:blue">https://github.com/CaoYuchen/16726/tree/main/a3</a>, and the related <a href="https://www.andrew.cmu.edu/course/16-726-sp22/projects/yuchenca/proj3/index.html" target="_blank" style="color:blue">website</a>.
+
+<center>
 {% capture images %}
-	{{ site.url }}/assets/img/photos.jpg
+	{{ site.url }}/assets/img/cycgan.jpg
 {% endcapture %}
-{% include gallery images=images caption="Photos & Paintings Demo2" cols=1 %} 
+{% include gallery images=images caption="CycleGAN Demo" cols=1 %}
+</center> 
+
+### Neural Style Transfer
+Neural Style Transfer is a vgg-19 based nueral network, utlizes regression method MSE for loss function, and LBFGS for input image(noise) optimization. It only uses the feature extraction part of vgg-19, and only for evaluation purpose(no gradient optimizaiton for these layers), instead, the optimizaiton happens in the loss function and input(two ends). And the loss function consists of two parts, content loss and style loss, we'll implement them separately first, and then combine them together with assigned weights. The detail implementation can be viewed here <a href="https://github.com/CaoYuchen/16726/tree/main/a4" target="_blank" style="color:blue">https://github.com/CaoYuchen/16726/tree/main/a4</a>, and the related <a href="https://www.andrew.cmu.edu/course/16-726-sp22/projects/yuchenca/proj4/index.html" target="_blank" style="color:blue">website</a>.
+
+
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/styletransfer.jpg
+{% endcapture %}
+{% include gallery images=images caption="Style Transfer Demo" cols=1 %}
 </center>
 
-You can check more about my works at:  
+### Dense Object Reconstruction from RGBD Images with Embedded Deep Shape Representations
+Most problems involving simultaneous localization and mapping can nowadays be solved using one of two fundamentally different approaches. The traditional approach is given by a least-squares objective, which minimizes many local photometric or geometric residuals over explicitly parametrized structure and camera parameters. Unmodeled effects violating the lambertian surface assumption or geometric invariances of individual residuals are encountered through statistical averaging or the addition of robust kernels and smoothness terms. Aiming at more accurate measurement models and the inclusion of higher-order shape priors, the community more recently shifted its attention to deep end-to-end models for solving geometric localization and mapping problems. However, at test-time, these feed-forward models ignore the more traditional geometric or photometric consistency terms, thus leading to a low ability to recover fine details and potentially complete failure in corner case scenarios. With an application to dense object modeling from RGBD images, our work aims at taking the best of both worlds by embedding modern higher-order object shape priors into classical iterative residual minimization objectives. We demonstrate a general ability to improve mapping accuracy with respect to each modality alone, and present a successful application to real data.
 
-<a href="https://www.instagram.com/joshua_cyc" target="_blank" style="color:blue">https://www.instagram.com/joshua_cyc</a>  
+This is a paper published in ACCV workshop, it can be found here <a href="https://arxiv.org/abs/1810.04891" target="_blank" style="color:blue">https://arxiv.org/abs/1810.04891</a>
 
-<a href="https://500px.me/caoyuchen" target="_blank" style="color:blue">https://500px.me/caoyuchen</a>
-
-***
-
-# Directed Video
-
-This is a short movie that I directed and shooted in a cooperated program conducted by University of Arts in London and ShanghaiTech University. My main contributions in this project mainly include:  
-
-- Screenwriter  
-- Director  
-- Cameraman  
-
-It's mainly made for propoganda of a concept product in the future --- Dreamatic goggles that help people record and replay the dream. You can view it below:  
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BuGByuTweKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-***
-
-# Film Screenwriting  
-
-I studied screenwriting courses which are led by professors from USC, this is one of my 30 mins movie script about an unofficial biography of Batman series.   
-
-The story is set at the time when Bruce Wayne passed his golden age of being Batman. The protagonist is a normal 14 year-old kid, a fanatic hero fan but without any super power, his encounter with Batman in a crime scene dramatically changes his life...  
 
 <center>
 {% capture images %}
-	{{ site.url }}/assets/img/Batman-GreatNormal.jpg
+	{{ site.url }}/assets/img/autoEncoder.jpg
 {% endcapture %}
-{% include gallery images=images caption="Batman-TheGreatNormal Demo" cols=1 %}
-</center>  
+{% include gallery images=images caption="Network Architecture" cols=1 %}
+</center>
 
-You can view the full screenplay here:  
 
-<a href="https://drive.google.com/file/d/1AsbFjWnSb9wbsEJpaNeeAZErSJWrjFaI/view" target="_blank" style="color:blue">Joshua-Batman-TheGreatNormal</a>  
+# Computer Graphics
 
-There are other two screenplays that I wrote, The Trace and The Last Journey, but they're not registered as IP yet. If you're interested, please email me for the stories viewing.  
 
 ***
 
-# Website Design 
+# Computer Vision & SLAM 
 
-This is a set of English teaching tools, Interactive White Borad(IWB), that I made for EF Education First, the main purpose of it is to assist children-oriented teaching in an entertaining and interactive way. My main contributions include:  
+### Representations and Benchmarking of Modern Visual SLAM Systems
+Simultaneous Localisation And Mapping (SLAM) has long been recognised as a core problem to be solved within countless emerging mobile applications that require intelligent interaction or navigation in an environment. Classical solutions to the problem primarily aim at localisation and reconstruction of a geometric 3D model of the scene. More recently, the community increasingly investigates the development of Spatial Artificial Intelligence (Spatial AI), an evolutionary paradigm pursuing a simultaneous recovery of object-level composition and semantic annotations of the recovered 3D model. Several interesting approaches have already been presented, producing object-level maps with both geometric and semantic properties rather than just accurate and robust localisation performance. As such, they require much broader ground truth information for validation purposes. We discuss the structure of the representations and optimisation problems involved in Spatial AI, and propose new synthetic datasets that, for the first time, include accurate ground truth information about the scene composition as well as individual object shapes and poses. We furthermore propose evaluation metrics for all aspects of such joint geometric-semantic representations and apply them to a new semantic SLAM framework. It is our hope that the introduction of these datasets and proper evaluation metrics will be instrumental in the evaluation of current and future Spatial AI systems and as such contribute substantially to the overall research progress on this important topic.
 
-- Design styles for children-oriented teaching
-- The entire programming of front-end
-- Data transfer part of Back-end
+This is a paper published in Sensors Journal, it can be found here <a href="https://www.mdpi.com/1424-8220/20/9/2572" target="_blank" style="color:blue">https://www.mdpi.com/1424-8220/20/9/2572</a>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0_Hi4KPP46A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/pythonPipeline.png
+{% endcapture %}
+{% include gallery images=images caption="Pipiline" cols=1 %}
+</center>
 
-There are also some other websites that I made, you can check them here:  
+### A basic framework of SLAM
+A fundamental SLAM system with tracking, mapping and pose optimization in Matlab. It includes SIFT & Harris feature extraction, 7/8 points, homography method, and LevenBerg-Marquardt average error for pose optimization. The detail implementation can be viewed here <a href="https://github.com/CaoYuchen/SLAM-basicframe" target="_blank" style="color:blue">https://github.com/CaoYuchen/SLAM-basicframe</a>
 
-<a href="https://caoyuchen.github.io/Dreamatic/" target="_blank" style="color:blue">Animated Website using three.js, for display of Dreamatic concept products</a>  
-<a href="http://mpl.sist.shanghaitech.edu.cn/" style="color:blue">Academic style lab website for MPL lab</a>  
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/basicSLAM.jpg
+{% endcapture %}
+{% include gallery images=images caption="Simultaneous Localization and Mapping" cols=1 %}
+</center>
+
 
 ***
 
-# Blender indoor rendering  
+# System 
+
+### CMU 15213/15513
+
+This course mainly includes basic computer system knowledge from compiler to linker, includes stack, heap, cache, simple network implementation, debug and disassemble usages. The assignment is based on C. The implementation can be found here <a href="https://github.com/CaoYuchen/CMU15513" target="_blank" style="color:blue">https://github.com/CaoYuchen/CMU15513</a>
+
+***
+
+# Computational Design  
 
 This is a realistic indoor renderning in Blender, I made it mainly for the purpose of scientific dataset generation, the rendering is real time.  
 
@@ -95,9 +106,38 @@ Derived from the real-time rendering work above, I also published the paper on <
 
 ***
 
-# Game Development
+# Digital Media Programming
 
-GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime" target="_blank" style="color:blue">Dr.Dox Quest For Time</a>. My major role in this project: 
+### Interactive White Board
+
+This is a set of English teaching tools, Interactive White Borad(IWB), that I made for EF Education First, the main purpose of it is to assist children-oriented teaching in an entertaining and interactive way. My main contributions include:  
+
+- Design styles for children-oriented teaching
+- The entire programming of front-end
+- Data transfer part of Back-end
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0_Hi4KPP46A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+### Goal Map
+
+I also made another questionaire website Goal Map for EF Education to help collect information quickly from parents to help their children locate best learning curve and courses to take.
+
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/goalmap.jpg
+{% endcapture %}
+{% include gallery images=images caption="Goal Map Demo" cols=1 %}
+</center>  
+
+There are also some other websites that I made, you can check them here:  
+
+<a href="https://caoyuchen.github.io/Dreamatic/" target="_blank" style="color:blue">Animated Website using three.js, for display of Dreamatic concept products</a>  
+<a href="http://mpl.sist.shanghaitech.edu.cn/" style="color:blue">Academic style lab website for MPL lab</a>  
+
+***
+### Dr.Dox Quest For Time
+
+GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime" target="_blank" style="color:blue">https://github.com/gcwhitfield/DrDoxQuestForTime</a>. It's a puzzle game where Dr.Dox is a time traveller seeking for treasures but he has to be careful to not bump into himself in the past to avoid time paradox. My major role in this project: 
 
 - Game design 
 - Programming
@@ -109,7 +149,9 @@ GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime
 {% include gallery images=images caption="Dr.Dox Quest For Time Demo" cols=1 %}
 </center>  
 
-CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanced-Game-Studio-Game" target="_blank" style="color:blue">Forest</a>. My major role in this project:
+### Forest
+
+CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanced-Game-Studio-Game" target="_blank" style="color:blue">https://github.com/gcwhitfield/Advanced-Game-Studio-Game</a>. This projects is a split-screen two players game, players need to cooperate together and communicate with each other offline while playing the daughter and father to solve puzzles, go through forest and hide from monsters, to finally let them meet in the game. My major role in this project:
 
 - Game Programmer
 - Sound Artist

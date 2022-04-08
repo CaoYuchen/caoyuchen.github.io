@@ -31,8 +31,9 @@ You can check more about my works at:
 
 ***
 
-# Directed Video
+# Directed Film
 
+### Dreamatic
 This is a short movie that I directed and shooted in a cooperated program conducted by University of Arts in London and ShanghaiTech University. My main contributions in this project mainly include:  
 
 - Screenwriter  
@@ -47,6 +48,7 @@ It's mainly made for propoganda of a concept product in the future --- Dreamatic
 
 # Film Screenwriting  
 
+### Batman - The Great Normal
 I studied screenwriting courses which are led by professors from USC, this is one of my 30 mins movie script about an unofficial biography of Batman series.   
 
 The story is set at the time when Bruce Wayne passed his golden age of being Batman. The protagonist is a normal 14 year-old kid, a fanatic hero fan but without any super power, his encounter with Batman in a crime scene dramatically changes his life...  
@@ -68,6 +70,7 @@ There are other two screenplays that I wrote, The Trace and The Last Journey, bu
 
 # Website Design 
 
+### Interactive White Board
 This is a set of English teaching tools, Interactive White Borad(IWB), that I made for EF Education First, the main purpose of it is to assist children-oriented teaching in an entertaining and interactive way. My main contributions include:  
 
 - Design styles for children-oriented teaching
@@ -85,6 +88,8 @@ There are also some other websites that I made, you can check them here:
 
 # 3D Model & Animation 
 
+### Photo-realistic Indoor Environment
+
 This is a realistic indoor renderning in Blender, I made it mainly for the purpose of scientific dataset generation, the rendering is real time.  
 
 The main work includes 3D model building, accurate size, illumination, realistic camera setting, etc. You can view it below:  
@@ -97,6 +102,8 @@ Derived from the real-time rendering work above, I also published the paper on <
 
 # Game Development
 
+### Dr.Dox Quest For Time
+
 GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime" target="_blank" style="color:blue">Dr.Dox Quest For Time</a>. It's a puzzle game where Dr.Dox is a time traveller seeking for treasures but he has to be careful to not bump into himself in the past to avoid time paradox. My major role in this project: 
 
 - Game design 
@@ -108,6 +115,8 @@ GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime
 {% endcapture %}
 {% include gallery images=images caption="Dr.Dox Quest For Time Demo" cols=1 %}
 </center>  
+
+### Forest
 
 CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanced-Game-Studio-Game" target="_blank" style="color:blue">Forest</a>. This projects is a split-screen two players game, players need to cooperate together and communicate with each other offline while playing the daughter and father to solve puzzles, go through forest and hide from monsters, to finally let them meet in the game. My major role in this project:
 

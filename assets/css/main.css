@@ -724,7 +724,7 @@ dt {
     border-color: rgba(229, 230, 233, 0.5) rgba(223, 224, 228, 0.5) #d0d1d5;
     border-radius: 3px;
     text-decoration: none;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.4);
     color: #282828
 }
 
