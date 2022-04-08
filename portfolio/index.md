@@ -98,6 +98,25 @@ The main work includes 3D model building, accurate size, illumination, realistic
 
 Derived from the real-time rendering work above, I also published the paper on <a href="https://www.mdpi.com/1424-8220/20/9/2572" target="_blank" style="color:blue">Sensors Journal</a>, the related website can be viewed at <a href="http://mpl.sist.shanghaitech.edu.cn/SSSBenchmark/SSS@MPL.html" target="_blank" style="color:blue">SSSBenchmark website</a>.
 
+### Architecture 3D Modelling
+
+I use Rhino + Grasshopper + Python to make parametric 3D models, and also I use AutoCAD + AdobeInDesign + Photoshop to create 2D visual concepts, here are some examples:
+
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/DSW1-Model.jpg
+{% endcapture %}
+{% include gallery images=images caption="2D Concept Art Demo" cols=1 %} 
+</center>
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/cube0.jpg
+	{{ site.url }}/assets/img/stadium3.png
+{% endcapture %}
+{% include gallery images=images caption="3D Architecture Demo" cols=1 %} 
+</center>
+
+
 ***
 
 # Game Development
@@ -132,4 +151,8 @@ CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanc
 {% include gallery images=images caption="Forest Demo" cols=1 %}
 </center>
 
+***
+# Audio Design
+
+I'm mostly interested in synthesized digital music, I mainly use Ableton Live to design music and sound effect for animation/movie/game purpose. Here is my music list in SoundCloud <a href="https://soundcloud.com/joshua-rain-24806913" target="_blank" style="color:blue">https://soundcloud.com/joshua-rain-24806913</a>
 

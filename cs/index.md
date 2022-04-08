@@ -56,6 +56,27 @@ This is a paper published in ACCV workshop, it can be found here <a href="https:
 
 # Computer Graphics
 
+### Draw SVG
+As name implies, this project's target is to draw svg from 3D shape, the main tasks are to draw line, triangle shapes, manage supersampling, transforms, trilinear filter, alpha composition, scaling, etc. you can find original link <a href="https://github.com/CMU-Graphics/DrawSVG" target="_blank" style="color:blue">here</a>, and this is my implementation <a href="https://github.com/CaoYuchen/CMU15662/tree/main/DrawSVG" target="_blank" style="color:blue">https://github.com/CaoYuchen/CMU15662/tree/main/DrawSVG</a>.
+
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/drawSVG.jpg
+{% endcapture %}
+{% include gallery images=images caption="Draw SVG Demo" cols=1 %}
+</center>
+
+### Scotty3D
+Scotty3D is a 3D modelling software developed by CMU for education purpose, you can find original link <a href="https://cmu-graphics.github.io/Scotty3D/" target="_blank" style="color:blue">here</a>, and this is my implementation <a href="https://github.com/CaoYuchen/Scotty3D" target="_blank" style="color:blue">https://github.com/CaoYuchen/Scotty3D</a>.
+
+This assignment covers basic half-edge-based 3D mesh and modeling algorithm, BVH, ray tracing rendering, rigging, simple animation and particle effect.
+
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/scotty3D.png
+{% endcapture %}
+{% include gallery images=images caption="Scotty3D Interface" cols=1 %}
+</center>
 
 ***
 
@@ -96,13 +117,16 @@ This course mainly includes basic computer system knowledge from compiler to lin
 
 # Computational Design  
 
-This is a realistic indoor renderning in Blender, I made it mainly for the purpose of scientific dataset generation, the rendering is real time.  
+### Cybernetics
 
-The main work includes 3D model building, accurate size, illumination, realistic camera setting, etc. You can view it below:  
+This is a dynamic self-balanced system based on vector field, the points start from random location and influenced by field force in each pixel, these points will gradually form into a dynamic stable status, as an representation of cybernetic system. It is implemented in Processing, the code can be found here <a href="https://github.com/CaoYuchen/Cybernetic" target="_blank" style="color:blue">https://github.com/CaoYuchen/Cybernetic</a>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3vrjjfpUNiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Derived from the real-time rendering work above, I also published the paper on <a href="https://www.mdpi.com/1424-8220/20/9/2572" target="_blank" style="color:blue">Sensors Journal</a>, the related website can be viewed at <a href="http://mpl.sist.shanghaitech.edu.cn/SSSBenchmark/SSS@MPL.html" target="_blank" style="color:blue">SSSBenchmark website</a>.
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/vectorField.gif
+{% endcapture %}
+{% include gallery images=images caption="Vector Field Demo" cols=1 %}
+</center>
 
 ***
 
