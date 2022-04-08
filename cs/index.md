@@ -53,7 +53,7 @@ This is a paper published in ACCV workshop, it can be found here <a href="https:
 {% include gallery images=images caption="Network Architecture" cols=1 %}
 </center>
 
-
+***
 # Computer Graphics
 
 ### Draw SVG
@@ -158,7 +158,6 @@ There are also some other websites that I made, you can check them here:
 <a href="https://caoyuchen.github.io/Dreamatic/" target="_blank" style="color:blue">Animated Website using three.js, for display of Dreamatic concept products</a>  
 <a href="http://mpl.sist.shanghaitech.edu.cn/" style="color:blue">Academic style lab website for MPL lab</a>  
 
-***
 ### Dr.Dox Quest For Time
 
 GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime" target="_blank" style="color:blue">https://github.com/gcwhitfield/DrDoxQuestForTime</a>. It's a puzzle game where Dr.Dox is a time traveller seeking for treasures but he has to be careful to not bump into himself in the past to avoid time paradox. My major role in this project: 
