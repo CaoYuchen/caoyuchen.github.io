@@ -61,7 +61,7 @@ As name implies, this project's target is to draw svg from 3D shape, the main ta
 
 <center>
 {% capture images %}
-	{{ site.url }}/assets/img/drawSVG.jpg
+	{{ site.url }}/assets/img/drawSVG.png
 {% endcapture %}
 {% include gallery images=images caption="Draw SVG Demo" cols=1 %}
 </center>
