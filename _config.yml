@@ -4,7 +4,7 @@ bio:                'Computer Vision & Graphics, SLAM, Machine & Deep Learning, 
 description:        "Welcome! This is Joshua's personal website."
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/logo.png'
+logo:               'assets/img/favicons/JR-32x32.png'
 profile:            'assets/img/CaoYuchen.jpg'
 background:         'assets/img/IMG_02271.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
