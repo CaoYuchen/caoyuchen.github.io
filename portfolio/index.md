@@ -34,13 +34,13 @@ You can check more about my works at:
 # Directed Film
 
 ### Dreamatic
-This is a short movie that I directed and shooted in a cooperated program conducted by University of Arts in London and ShanghaiTech University. My main contributions in this project mainly include:  
+This is a short movie that I directed and shot in a cooperated program conducted by University of Arts in London and ShanghaiTech University. My main contributions in this project mainly include:  
 
 - Screenwriter  
 - Director  
 - Cameraman  
 
-It's mainly made for propoganda of a concept product in the future --- Dreamatic goggles that help people record and replay the dream. You can view it below:  
+It's mainly made for propaganda of a concept product in the future --- Dreamatic goggles that help people record and replay the dream. You can view it below:  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BuGByuTweKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -71,7 +71,7 @@ There are other two screenplays that I wrote, The Trace and The Last Journey, bu
 # Website Design 
 
 ### Interactive White Board
-This is a set of English teaching tools, Interactive White Borad(IWB), that I made for EF Education First, the main purpose of it is to assist children-oriented teaching in an entertaining and interactive way. My main contributions include:  
+This is a set of English teaching tools, Interactive White Board(IWB), that I made for EF Education First, the main purpose of it is to assist children-oriented teaching in an entertaining and interactive way. My main contributions include:  
 
 - Design styles for children-oriented teaching
 - The entire programming of front-end
@@ -123,7 +123,7 @@ I use Rhino + Grasshopper + Python to make parametric 3D models, and also I use 
 
 ### Dr.Dox Quest For Time
 
-GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime" target="_blank" style="color:blue">Dr.Dox Quest For Time</a>. It's a puzzle game where Dr.Dox is a time traveller seeking for treasures but he has to be careful to not bump into himself in the past to avoid time paradox. My major role in this project: 
+GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime" target="_blank" style="color:blue">Dr.Dox Quest For Time</a>. It's a puzzle game where Dr.Dox is a time traveler seeking for treasures but he has to be careful to not bump into himself in the past to avoid time paradox. My major role in this project: 
 
 - Game design 
 - Programming
@@ -152,7 +152,7 @@ CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanc
 </center>
 
 ***
-# Audio Design
+# Sound Design
 
 I'm mostly interested in synthesized digital music, I mainly use Ableton Live to design music and sound effect for animation/movie/game purpose. Here is my music list in SoundCloud <a href="https://soundcloud.com/joshua-rain-24806913" target="_blank" style="color:blue">https://soundcloud.com/joshua-rain-24806913</a>
 
