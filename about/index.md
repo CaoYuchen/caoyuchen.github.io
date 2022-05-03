@@ -29,7 +29,7 @@ Game Design/Develop, Film Directing, Photography, Screenwriting, Sound Design, 3
 ## Contact Me
  
 Address: Pittsburgh, PA, U.S.  
-Email: caoyuchen.joshua@gmail.com  
+Email: caoyuchen[dot]joshua[at]gmail[dot]com
 Phone: (+1) 4129548151  
 
 Github: [https://github.com/CaoYuchen](https://github.com/CaoYuchen)  
