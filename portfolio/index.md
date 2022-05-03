@@ -135,9 +135,9 @@ GGJ 2022 game project: <a href="https://github.com/gcwhitfield/DrDoxQuestForTime
 {% include gallery images=images caption="Dr.Dox Quest For Time Demo" cols=1 %}
 </center>  
 
-### Forest
+### Penumbra
 
-CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanced-Game-Studio-Game" target="_blank" style="color:blue">Forest</a>. This projects is a split-screen two players game, players need to cooperate together and communicate with each other offline while playing the daughter and father to solve puzzles, go through forest and hide from monsters, to finally let them meet in the game. My major role in this project:
+CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanced-Game-Studio-Game" target="_blank" style="color:blue">Penumbra</a>. This projects is a split-screen two players game, players need to cooperate together and communicate with each other offline while playing the daughter and father to solve puzzles, go through forest and hide from monsters, to finally let them meet in the game. My major role in this project:
 
 - Game Programmer
 - Sound Artist
@@ -148,8 +148,10 @@ CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanc
 {% capture images %}
 	{{ site.url }}/assets/img/Forest.jpg
 {% endcapture %}
-{% include gallery images=images caption="Forest Demo" cols=1 %}
+{% include gallery images=images caption="Penumbra Demo" cols=1 %}
 </center>
+
+<iframe width="560" height="315" src="https://drive.google.com/file/d/1Xak8_xMf4E4C73CwjqslYpquJiFe1tjP/view?resourcekey" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ***
 # Sound Design
