@@ -189,6 +189,6 @@ CMU Advanced Game Studio project: <a href="https://github.com/gcwhitfield/Advanc
 {% include gallery images=images caption="Penumbra Demo" cols=1 %}
 </center>
 
-<iframe width="560" height="315" src="https://drive.google.com/file/d/1Xak8_xMf4E4C73CwjqslYpquJiFe1tjP/view?resourcekey" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/MYTMJihWAEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
