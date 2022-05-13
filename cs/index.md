@@ -9,6 +9,19 @@ comments: false
 
 # Deep & Machine Learning 
 
+### NeRF-W
+
+In this project, we explore and experiment with existing NeRF related neural network, we are interested in using NeRF to generate free view sythesized authentic photos, and especially for these large objects that are to approach clean version of views, such as large architecture with occlusions and views that are too high to take a picture unless using drone.
+
+<center>
+{% capture images %}
+	{{ site.url }}/assets/img/mmch_march.gif
+	{{ site.url }}/assets/img/mmch_leftright.gif
+	{{ site.url }}/assets/img/mmch_backforth.gif
+{% endcapture %}
+{% include gallery images=images caption="Poisson Blending Demo" cols=1 %}
+</center> 
+
 ### Poisson Blending
 The project explores the gradient-domain processing in the practice of image blending, tone mapping and non-photorealistic rendering. The method mainly focuses on the Poisson Blending algorithm. The tasks include primary gradient minimization, 4 neighbors based Poisson blending, mixed gradient Poisson blending and gray-scale intensity preserved color2gray method. The whole project is implemented in Python. The detail implementation can be viewed here <a href="https://github.com/CaoYuchen/16726/tree/main/a2" target="_blank" style="color:blue">https://github.com/CaoYuchen/16726/tree/main/a2</a>, and the related <a href="https://www.andrew.cmu.edu/course/16-726-sp22/projects/yuchenca/proj2/index.html" target="_blank" style="color:blue">website</a>.
 
