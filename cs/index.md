@@ -19,7 +19,7 @@ In this project, we explore and experiment with existing NeRF related neural net
 	{{ site.url }}/assets/img/mmch_leftright.gif
 	{{ site.url }}/assets/img/mmch_backforth.gif
 {% endcapture %}
-{% include gallery images=images caption="Poisson Blending Demo" cols=1 %}
+{% include gallery images=images caption="Poisson Blending Demo" cols=3 %}
 </center> 
 
 ### Poisson Blending
