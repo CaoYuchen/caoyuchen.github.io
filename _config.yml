@@ -1,10 +1,10 @@
 # Site
 title:              Joshua Rain(Yuchen Cao)
-bio:                'Computer Vision & Graphics, Machine & Deep Learning, <br><br> Interactive Media, Film, 3D Art, Digital Music.'
+bio:                'Computer Vision & Graphics, Machine & Deep Learning, SLAM <br><br> Interactive Media, Filmmaking, 3D Art, Digital Music.'
 description:        "Welcome! This is Joshua's personal website."
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/favicons/JR-32x32.png'
+logo:               'assets/img/favicons/JR-T-32x32.png'
 profile:            'assets/img/CaoYuchen.jpg'
 background:         'assets/img/IMG_02271.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
