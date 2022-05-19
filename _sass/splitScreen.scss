@@ -51,7 +51,7 @@
 
 .bottom {
     /*background-color: rgb(44, 44, 44);*/
-    background-image: url("./background2.jpg");
+    // background-image: url("./background2.jpg");
     z-index: 1;
 }
 
@@ -61,7 +61,7 @@
 
 .top {
     /*background-color: rgb(77, 69, 173);*/
-    background-image: url("./background1.jpg");
+    // background-image: url("./background1.jpg");
     z-index: 2;
     width: 50vw;
 
@@ -78,7 +78,8 @@
     height: 100%;
     position: absolute;
     display: block;
-    background-color: rgb(253, 171, 0);
+    // background: linear-gradient(45deg,rgba(253, 171, 0, 1)  0%, rgba(191,146,87,1) 100%);
+    background: linear-gradient(-45deg, rgba(223,115,14,1) 35%, rgba(57,124,147,1) 50%, rgba(147,0,172,1) 65%);
     width: 5px;
     top: 0;
     left: 50%;
