@@ -50,6 +50,20 @@
     {% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.url }}/{{ background }}{% endcapture %}{% endunless %}
     <style type="text/css">body {background-image:url({{ background }}); {% unless site.tiled_bg %} background-repeat: no-repeat; background-size: cover; {% endunless %}}</style>
     {% endif %}
+
+    {% if page.tags contains "cs" and site.background1%}
+    {% capture background1 %}{{ site.background1 }}{% endcapture %}
+    {% unless background1 contains 'http://' or background1 contains 'https://' %}{% capture background1 %}{{ site.url }}/{{ background1 }}{% endcapture %}{% endunless %}
+    <style type="text/css">body {background-image:url({{ background1 }}); {% unless site.tiled_bg %} background-repeat: no-repeat; background-size: cover; {% endunless %}}</style>
+    {% endif %}
+
+    {% if page.tags contains "portfolio" and site.background2%}
+    {% capture background2 %}{{ site.background2 }}{% endcapture %}
+    {% unless background2 contains 'http://' or background2 contains 'https://' %}{% capture background2 %}{{ site.url }}/{{ background2 }}{% endcapture %}{% endunless %}
+    <style type="text/css">body {background-image:url({{ background2 }}); {% unless site.tiled_bg %} background-repeat: no-repeat; background-size: cover; {% endunless %}}</style>
+    {% endif %}
+
+
     <!-- Post Feature Image -->
     {% if page.feature %}
     {% capture feature %}{{ page.feature }}{% endcapture %}
