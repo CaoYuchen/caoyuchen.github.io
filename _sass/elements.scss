@@ -17,6 +17,7 @@
 	margin: 10px;
 	@extend %btnextend;
 }
+
 .btn {
 	padding: 10px 18px;
 	@include font-rem(14);
@@ -69,6 +70,24 @@
         background-color: $white;
         color: $info;
       }
+    }
+    &.btn-art {
+      // &:hover {
+        color: $white;
+        background-color: #752863;
+        border-color: #752863;
+        box-shadow: none;
+        filter: drop-shadow(0 0 10px #752863) contrast(2) brightness(2);
+      // }
+    }
+    &.btn-cs {
+      // &:hover {
+        color: $white;
+        background-color: #7d5b09;
+        border-color: #7d5b09;
+        box-shadow: none;
+        filter: drop-shadow(0 0 10px #7d5b09) contrast(2) brightness(2);
+      // }
     }
 }
 .title .btn {
