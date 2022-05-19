@@ -114,8 +114,8 @@
 }
 
 /* Responsive. */
-// @media (max-width: 900px) {
-//     body {
-//         font-size: 75%;
-//     }
-// }
+@media (max-width: 480px) {
+    .splitview{
+        display: none;
+    }
+}
