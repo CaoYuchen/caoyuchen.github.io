@@ -3,16 +3,16 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
+// body {
+//     margin: 0;
+//     padding: 0;
+// }
 
 /* Panels. */
 .splitview {
     position: fixed;
     width: 100%;
-    min-height: 50vw;
+    min-height: 100%;
     overflow: hidden;
     z-index: -1000;
 }
@@ -20,14 +20,14 @@ body {
 .panel {
     position: fixed;
     width: 100vw;
-    min-height: 50vw;
+    min-height: 100%;
     overflow: hidden;
 }
 
     .panel .content {
         position: absolute;
         width: 100vw;
-        min-height: 50vw;
+        min-height: 100%;
         color: #FFF;
     }
 
@@ -111,8 +111,8 @@ body {
 }
 
 /* Responsive. */
-@media (max-width: 900px) {
-    body {
-        font-size: 75%;
-    }
-}
+// @media (max-width: 900px) {
+//     body {
+//         font-size: 75%;
+//     }
+// }

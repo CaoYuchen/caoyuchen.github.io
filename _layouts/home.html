@@ -21,6 +21,20 @@ layout: compress
 </head>
 <body>
     {% include nav.html %}
+    <!-- split screen -->
+    <div class="splitview skewed">
+        <div class="panel bottom">
+            <div class="content">
+                <img src="{{ site.url }}/{{ site.background2 }}" alt="Original">
+            </div>
+        </div>
+        <div class="panel top">
+            <div class="content">
+                <img src="{{ site.url }}/{{ site.background1 }}" alt="Duotone">
+            </div>
+        </div>
+        <div class="handle"></div>
+    </div>
     <!-- Header -->
     <header class="header flex" role="banner">
         <div class="container animated fadeIn">

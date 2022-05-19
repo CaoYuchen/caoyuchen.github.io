@@ -7,6 +7,8 @@ words_per_minute:   200
 logo:               'assets/img/favicons/JR-T-32x32.png'
 profile:            'assets/img/CaoYuchen.jpg'
 background:         'assets/img/IMG_02271.jpg'
+background1:        'assets/img/background1.jpg'
+background2:        'assets/img/background2.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://caoyuchen.github.io
