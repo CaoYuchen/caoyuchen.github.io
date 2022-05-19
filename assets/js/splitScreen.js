@@ -31,4 +31,30 @@ document.addEventListener('DOMContentLoaded', function() {
             $("#artButton").addClass("btn-art");
         }
     });
+
+    $("#csButton").click(function(){
+        handle.style.transition = "all 0.5s ease-out";
+        topPanel.style.transition = "all 0.5s ease-out";
+        // Move the handle.
+        handle.style.left = window.innerWidth * 1.2 + 'px';
+        // Adjust the top panel width.
+        topPanel.style.width = window.innerWidth * 1.2 + skewHack + 'px';
+
+        setTimeout(function () {
+            window.location="/cs";
+        }, 500);
+    });
+
+    $("#artButton").click(function(){
+        handle.style.transition = "all 0.5s ease-out";
+        topPanel.style.transition = "all 0.5s ease-out";
+        // Move the handle.
+        handle.style.left = -window.innerWidth * 0.2 + 'px';
+        // Adjust the top panel width.
+        topPanel.style.width = -window.innerWidth * 0.2 + skewHack + 'px';
+
+        setTimeout(function () {
+            window.location="/portfolio";
+        }, 500);
+    });
 });
