@@ -46,7 +46,8 @@ layout: compress
                     {% capture images %}
                         {{"/assets/img/" | prepend: site.baseurl | append : post.img}}
                     {% endcapture %}
-                    <img href="{{images}}" class="post-thumbnail" src="{{images}}">
+                    <!-- <img href="{{images}}" class="post-thumbnail" src="{{images}}"> -->
+                    <a class="post-thumbnail" href="{{images}}" style="background-image: url({{images}})" ></a>
                     {% endif %}
                     <div class="post-content">
                         <h2 class="post-title-cs"><a href="{{ post.github }}" target="_blank">{{post.title}}</a></h2>
