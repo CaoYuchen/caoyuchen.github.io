@@ -124,13 +124,17 @@ body {
 	margin: 1rem auto;
 	@extend .wrapper;
 	h1{
-		color: white;
+		color: #ffa603;
 		font-size: 3em;
 	}
 	@media #{$small} {
 		width: 100%;
 		padding: 0;
 	    box-shadow: none;
+	    h1{
+			color: #ffa603;
+			font-size: 2.2em;
+		}
 	}
 }
 
