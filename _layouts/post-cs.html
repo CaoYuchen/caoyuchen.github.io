@@ -43,7 +43,12 @@ layout: compress
                 {% for post in site.posts %}
                 <article class="post wow fadeInLeft" data-wow-duration="1.5s">
                     {% if post.img %}
-                    <a class="post-thumbnail" href="{{ post.github }}" target="_blank" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})"></a>
+                    <!-- <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})"></a> -->
+                    <img class="post-thumbnail image-popup" src="{{"/assets/img/" | prepend: site.baseurl | append : post.img}}">
+<!--                         {% capture images %}
+                            {{"/assets/img/" | prepend: site.baseurl | append : post.img}}
+                        {% endcapture %}
+                        {% include gallery images=image cols=1 %} -->
                     {% endif %}
                     <div class="post-content">
                         <h2 class="post-title-cs"><a href="{{ post.github }}" target="_blank">{{post.title}}</a></h2>
