@@ -9,7 +9,7 @@ window.onunload = function() {};
 
 // Add lightbox class to all image links
 $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
-
+$(".post-thumbnail").addClass("image-popup");
 // FitVids options
 $(function() {
   $(".content").fitVids();
@@ -21,8 +21,8 @@ $(document).ready(function() {
     if ($(".container").hasClass('fadeOut')) {
         $(".container").removeClass("fadeOut").addClass("fadeIn");
     }
-    if ($(".wrapper").hasClass('fadeOut')) {
-        $(".wrapper").removeClass("fadeOut").addClass("fadeIn");
+    if ($(".wrapper, .wrapper-cs").hasClass('fadeOut')) {
+        $(".wrapper, .wrapper-cs").removeClass("fadeOut").addClass("fadeIn");
     }
     $(".zoombtn").click(function() {
         $(".container").removeClass("fadeIn").addClass("fadeOut");
