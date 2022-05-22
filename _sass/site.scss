@@ -118,14 +118,15 @@ body {
 }
 
 .wrapper-cs{
-	max-width: 1050px;
+	max-width: 1150px;
 	background: transparent;
 	box-shadow: none;
 	margin: 1rem auto;
 	@extend .wrapper;
 	h1{
 		color: #ffa603;
-		font-size: 3em;
+		font-size: 3.3em;
+		filter: drop-shadow(0 0 4px #ffa603) contrast(1) brightness(1.4);
 	}
 	@media #{$small} {
 		width: 100%;
@@ -134,6 +135,31 @@ body {
 	    h1{
 			color: #ffa603;
 			font-size: 2.2em;
+			filter:none;
+		}
+	}
+}
+
+.wrapper-art{
+	// width: 100%;
+	max-width: 1150px;
+	background: transparent;
+	box-shadow: none;
+	margin: 1rem auto;
+	@extend .wrapper;
+	h1{
+		color: #ffa603;
+		font-size: 3.3em;
+		filter: drop-shadow(0 0 4px #ffa603) contrast(1) brightness(1.4);
+	}
+	@media #{$small} {
+		width: 100%;
+		padding: 0;
+	    box-shadow: none;
+	    h1{
+			color: #ffa603;
+			font-size: 2.2em;
+			filter:none;
 		}
 	}
 }

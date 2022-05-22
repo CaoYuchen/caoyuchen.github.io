@@ -13,13 +13,13 @@ layout: compress
     {% include nav.html %}
     <!-- Header -->
     <header class="header" role="banner">
-        <div class="wrapper-cs animated fadeIn">
+        <div class="wrapper-art animated fadeIn">
             <div class="content">
                 <div class="post-title">
                     <h1>{{ page.title }}</h1>
-<!--                     <a class="btn zoombtn" href="{{site.url}}" style="margin: -10px auto">
+                    <a class="btn zoombtn" href="{{site.url}}" style="margin: -10px auto">
                         <i class="fa fa-home" style="font-size: 1.2rem;"></i>
-                    </a> -->
+                    </a>
                 </div>
 <!--                 <div class="post-list">
                     {% for post in site.posts %} 
@@ -44,7 +44,7 @@ layout: compress
                       {% else %}
                       {% endif %}
                       <div class="post-content">
-                        <h2 class="post-title"><a>{{post.title}}</a></h2>
+                        <h2 class="post-title-art"><a>{{post.title}}</a></h2>
                         <p>{{ post.content | strip_html | truncatewords: 150 }}</p>
                     <!--     <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
                         <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span> -->
