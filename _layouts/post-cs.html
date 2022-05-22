@@ -1,0 +1,77 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    {% include nav.html %}
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="wrapper-cs animated fadeIn">
+            <!--                         <div class="content">
+                <div class="post-title">
+                    <h1>{{ page.title }}</h1>
+                    <a class="btn zoombtn" href="{{site.url}}" style="margin: -10px auto">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </div>
+                <div class="post-list">
+                    {% for post in site.posts %} 
+                        {% if post.project == null %}
+                    <ul>
+                        <li class="wow fadeInLeft" data-wow-duration="1.5s">
+                            <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                            <p>{{ post.excerpt }}</p>
+                            <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">Read More</a>
+                        </li>
+                    </ul>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div> -->
+            <div class="content-box clearfix">
+                {% for post in site.posts %}
+                <article class="post wow fadeInLeft" data-wow-duration="1.5s">
+                    {% if post.img %}
+                    <a class="post-thumbnail" href="{{ post.github }}" target="_blank" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})"></a>
+                    {% endif %}
+                    <div class="post-content">
+                        <h2 class="post-title-cs"><a href="{{ post.github }}" target="_blank">{{post.title}}</a></h2>
+                        {% if post.keywords %}
+                        <p class="post-tag">{{post.keywords}}</p>
+                        {% endif %}
+                        <p>{{ post.content | strip_html | truncatewords: 150 }}</p>
+   <!--                      <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+                        <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span> -->
+                        {% if post.github %}
+                        <a class="post-link" href="{{ post.github }}" target="_blank" rel="noopener noreferrer">[Github]</a>
+                        &nbsp;&nbsp;&nbsp;
+                        {% endif %}
+                        {% if post.web %}
+                        <a class="post-link" href="{{ post.web }}" target="_blank" rel="noopener noreferrer">[Web]</a>
+                        {% endif %}
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </header>
+    {% include scripts.html %}
+    <script src="{{ site.url }}/assets/js/wow.min.js"></script>
+    <script type="text/javascript">
+    (new WOW).init();
+
+    </script>
+</body>
+
+</html>

@@ -116,6 +116,24 @@ body {
 	    box-shadow: none;
 	}
 }
+
+.wrapper-cs{
+	max-width: 1050px;
+	background: transparent;
+	box-shadow: none;
+	margin: 1rem auto;
+	@extend .wrapper;
+	h1{
+		color: white;
+		font-size: 3em;
+	}
+	@media #{$small} {
+		width: 100%;
+		padding: 0;
+	    box-shadow: none;
+	}
+}
+
 #disqus_thread {
 	width: 75%;
 	max-width: 850px;

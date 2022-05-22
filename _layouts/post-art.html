@@ -13,15 +13,15 @@ layout: compress
     {% include nav.html %}
     <!-- Header -->
     <header class="header" role="banner">
-        <div class="wrapper animated fadeIn">
+        <div class="wrapper-cs animated fadeIn">
             <div class="content">
                 <div class="post-title">
                     <h1>{{ page.title }}</h1>
-                    <a class="btn zoombtn" href="{{site.url}}" style="margin: -10px auto">
+<!--                     <a class="btn zoombtn" href="{{site.url}}" style="margin: -10px auto">
                         <i class="fa fa-home"></i>
-                    </a>
+                    </a> -->
                 </div>
-                <div class="post-list">
+<!--                 <div class="post-list">
                     {% for post in site.posts %} 
                         {% if post.project == null %}
                     <ul>
@@ -33,9 +33,27 @@ layout: compress
                     </ul>
                         {% endif %}
                     {% endfor %}
-                </div>
+                </div> -->
+            </div>
+
+            <div class="content-box clearfix"> 
+                {% for post in site.posts %}
+                    <article class="post wow fadeInLeft" data-wow-duration="1.5s">
+                      {% if post.img %}
+                        <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" ></a>
+                      {% else %}
+                      {% endif %}
+                      <div class="post-content">
+                        <h2 class="post-title"><a>{{post.title}}</a></h2>
+                        <p>{{ post.content | strip_html | truncatewords: 150 }}</p>
+                    <!--     <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+                        <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span> -->
+                      </div>
+                    </article>
+                {% endfor %}
             </div>
         </div>
+
     </header>
     {% include scripts.html %}
     <script src="{{ site.url }}/assets/js/wow.min.js"></script>
