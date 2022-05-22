@@ -21,12 +21,18 @@ $(document).ready(function() {
     if ($(".container").hasClass('fadeOut')) {
         $(".container").removeClass("fadeOut").addClass("fadeIn");
     }
-    if ($(".wrapper, .wrapper-cs").hasClass('fadeOut')) {
-        $(".wrapper, .wrapper-cs").removeClass("fadeOut").addClass("fadeIn");
+    if ($(".wrapper").hasClass('fadeOut')) {
+        $(".wrapper").removeClass("fadeOut").addClass("fadeIn");
+    }
+    if ($(".wrapper-cs").hasClass('fadeOut')) {
+        $(".wrapper-cs").removeClass("fadeOut").addClass("fadeIn");
+    }
+    if ($(".wrapper-art").hasClass('fadeOut')) {
+        $(".wrapper-art").removeClass("fadeOut").addClass("fadeIn");
     }
     $(".zoombtn").click(function() {
         $(".container").removeClass("fadeIn").addClass("fadeOut");
-        $(".wrapper").removeClass("fadeIn").addClass("fadeOut");
+        $(".wrapper, wrapper-cs, wrapper-art").removeClass("fadeIn").addClass("fadeOut");
     });
     // go up button
     $.goup({
