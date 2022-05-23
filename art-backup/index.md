@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Art Portfolio"
-tags: [portfolio]
+tags: [art]
 date: 2022-04-07
 comments: false
 ---

@@ -59,7 +59,7 @@
     <style type="text/css">body {background-image:url({{ background1 }}); {% unless site.tiled_bg %} background-repeat: no-repeat; background-size: cover; {% endunless %}}</style>
     {% endif %}
 
-    {% if page.tags contains "portfolio" and site.background2%}
+    {% if page.tags contains "art" and site.background2%}
     {% capture background2 %}{{ site.background2 }}{% endcapture %}
     {% unless background2 contains 'http://' or background2 contains 'https://' %}{% capture background2 %}{{ site.url }}/{{ background2 }}{% endcapture %}{% endunless %}
     <style type="text/css">body {background-image:url({{ background2 }}); {% unless site.tiled_bg %} background-repeat: no-repeat; background-size: cover; {% endunless %}}</style>
