@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         topPanel.style.width = -window.innerWidth * 0.2 + skewHack + 'px';
 
         setTimeout(function () {
-            window.location="/art";
+            window.location="/portfolio";
         }, 500);
     });
 });

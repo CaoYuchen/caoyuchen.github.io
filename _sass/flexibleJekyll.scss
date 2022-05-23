@@ -95,7 +95,7 @@
     .post {
         width: 100%;
         max-width: 100%;
-        margin: 0 0.9% 1.5%;
+        margin: 4% 0.9% 1.5%;
         flex-direction: column;
 
         .post-thumbnail {
@@ -175,6 +175,10 @@
         margin: 4% 2%;
         flex-direction: column;
         box-shadow: 0px 1px 10px 0px rgba(31, 35, 46, 15%);
+
+        &:hover {
+            transform: none;
+        }
 
         .post-thumbnail {
             width: 100%;
