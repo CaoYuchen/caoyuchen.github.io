@@ -4,7 +4,11 @@ var total=120,container=document.getElementById('firefly-container'),w=window.in
 for (var i=total;i--;){ 
 	var Div=document.createElement('div');
 	TweenLite.set(Div,{attr:{class:'dot'},x:R(w),y:R(h),opacity:0});
-	container.appendChild(Div);	Anim(Div);	Tweens.push(Div);
+	if(container){
+		container.appendChild(Div);	
+		Anim(Div);	
+		Tweens.push(Div);
+	}
 };
 
 function Anim(elm){ 

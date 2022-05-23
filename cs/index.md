@@ -1,6 +1,6 @@
 ---
 layout: post-cs
-title: Computer Science
+title: Plus Ultra
 excerpt: "A List of CS Posts"
 comments: false
 tags: [cs]
