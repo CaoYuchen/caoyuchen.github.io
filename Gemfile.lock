@@ -118,6 +118,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
+    wdm (0.1.1)
     webrick (1.7.0)
     zeitwerk (2.5.4)
 
@@ -133,6 +134,7 @@ DEPENDENCIES
   jekyll-mentions
   jekyll-sitemap
   kramdown-parser-gfm (~> 1.1)
+  wdm (>= 0.1.0)
   webrick
 
 BUNDLED WITH

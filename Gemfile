@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem 'wdm', '>= 0.1.0'
 # gem "jekyll", "~> 3.6.3"
 gem "jekyll", "~> 3.9"
 gem "jekyll-sitemap"

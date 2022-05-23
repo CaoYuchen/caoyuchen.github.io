@@ -88,6 +88,34 @@ $itemMinWidth: 300px;
 $maxItemsPerRow: 6;
 
 
+
+body.main-page {
+  background-color: #141414;
+
+  .bar-header {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+body.light:not(.main-page) {
+  .bar-header {
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.95);
+
+    .icon-search,
+    .icon-menu {
+      fill: $primaryDark;
+    }
+
+    .logo a,
+    .version {
+      color: $primaryDark;
+    }
+  }
+}
+
+
+
 .hero {
   position: relative;
   background-position: center center;
@@ -202,7 +230,7 @@ $maxItemsPerRow: 6;
 
 
 .home {
-  @include mainFont(400);
+  @include mainFont(400); 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-top: rem(80px);
@@ -219,6 +247,7 @@ $maxItemsPerRow: 6;
 .row {
   @include center(100%);
   margin: 0px rem($rowMargin);
+  text-align: left;
 }
 
 .flex-grid {
@@ -272,6 +301,7 @@ $maxItemsPerRow: 6;
     }
 
     .box-body {
+      text-align: left;
       time,
       p {
         color: $accentDark;
