@@ -246,7 +246,7 @@ body.light:not(.main-page) {
   }
 }
 
-.row {
+.row-art {
   @include center(100%);
   margin: 0px rem($rowMargin);
   text-align: left;
