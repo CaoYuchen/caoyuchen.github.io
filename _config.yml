@@ -17,7 +17,6 @@ url:                https://caoyuchen.github.io
 
 # Jekflix
 show_hero: true
-# post_hero: 2014-01-01-do-you-believe-that-a-spider-can-dance
 
 # Jekyll
 permalink:          /:title/

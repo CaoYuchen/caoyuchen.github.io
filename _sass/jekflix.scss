@@ -1,4 +1,8 @@
 // from jekflix
+@function rem($pixels) {
+  @return ($pixels / 16px) * 1rem;
+}
+
 
 @mixin mainFont($weight: 700) {
   font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
@@ -114,7 +118,7 @@ $maxItemsPerRow: 6;
     background-image: linear-gradient(0deg, rgba(20, 20, 20, 1) 5%, rgba(0, 0, 0, 0) 30%);
   }
 
-  .content {
+  .content-art {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -132,8 +136,8 @@ $maxItemsPerRow: 6;
       color: rgba(255, 255, 255, 0.75);
     }
 
-    .title {
-      font-size: rem(40px);
+    .title-art {
+      font-size: rem(40px); 
       color: #fff;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       margin: rem(10px) 0;
@@ -143,7 +147,7 @@ $maxItemsPerRow: 6;
       }
     }
 
-    .description {
+    .description-art {
       font-size: rem(24px);
       color: #fff;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);

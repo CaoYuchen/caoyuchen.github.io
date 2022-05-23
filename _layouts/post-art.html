@@ -1,6 +1,8 @@
 ---
 layout: compress
+tags: [portfolio]
 ---
+
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
@@ -11,41 +13,7 @@ layout: compress
 </head>
 <body>
     {% include nav.html %}
-    <!-- Header -->
-<!--     <header class="header" role="banner">
-        <div class="wrapper-art animated fadeIn">
-            <div class="content">
-                <div class="post-title">
-                    <h1>{{ page.title }}</h1>
-                    <a class="btn zoombtn" href="{{site.url}}" style="margin: -10px auto">
-                        <i class="fa fa-home" style="font-size: 1.2rem;"></i>
-                    </a>
-                </div>
-            </div>
 
-            <div class="content-box clearfix"> 
-                {% for post in site.posts %}
-                    <article class="post wow fadeInLeft" data-wow-duration="1.5s">
-                      {% if post.img %}
-                        <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" ></a>
-                      {% else %}
-                      {% endif %}
-                      <div class="post-content">
-                        <h2 class="post-title-art"><a>{{post.title}}</a></h2>
-                        <p>{{ post.content | strip_html | truncatewords: 150 }}</p>
-                      </div>
-                    </article>
-                {% endfor %}
-            </div>
-        </div>
-
-    </header> -->
-
-    {% include scripts.html %}
-    <script src="{{ site.url }}/assets/js/wow.min.js"></script>
-    <script type="text/javascript">(new WOW).init();</script>
-</body>
-</html>
 
 
 {% if site.paginate %}
@@ -61,38 +29,26 @@ layout: compress
 {% endif %}
 <main class="home {% if site.show_hero and paginator == nil or paginator.page == 1 %}no-padding{% endif %}" role="main">
     {% if site.show_hero and paginator == nil or paginator.page == 1 %}
-        <!-- Hero -->
-        {% for post in posts %}
-        {% if post.hero %}
-        {% assign featured = post %}
-        {% endif %}
-        {% endfor %}
-        <section class="hero" style="background-image: url({{ featured.image }})">
-            <div class="pixels"></div>
-            <div class="gradient"></div>
-            <div class="content">
-                <time datetime="{{ featured.date | date_to_xmlschema }}" class="date">
-                    {% if site.date_format == nil %}
-                        {{ featured.date | date: "%m.%d.%Y" }}
-                    {% else %}
-                        {{ featured.date | date: site.date_format }}
-                    {% endif %}
-                </time>
-                <h1 class="title">{{ featured.title }}</h1>
-                <p class="description">{{ featured.subtitle }}</p>
-                <div class="buttons">
-                    <a href="{{ featured.url | prepend: site.baseurl }}" role="button" class="button">
-                        <svg><use xlink:href="#icon-read"></use></svg>
-                        <span>{{ site.translations.button.read_now | default: "Read Now" }}</span>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <!-- Hero -->
+    {% for post in posts %}
+    {% if post.hero %}
+    {% assign featured = post %}
+    {% endif %}
+    {% endfor %}
+    <section class="hero" style="background-image: url({{ featured.image }})">
+        <div class="pixels"></div>
+        <div class="gradient"></div>
+        <div class="content-art">
+            <h1 class="title-art">{{ featured.title }}</h1>
+            <p class="description-art">{{ featured.subtitle }}</p>
+        </div>
+    </section>
     {% endif %}
     <!-- Posts -->
-    <section id="grid" class="row flex-grid">
+    <section id="grid" class="row flex-grid" style="background-image: url({{site.background2}})">
         {% for post in site.posts %}
         {% if post.path contains 'art' %}
+        {% unless post.hero %}
             <article class="box-item">
                 <span class="category">
                     <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
@@ -110,8 +66,6 @@ layout: compress
                         {% endif %}
                     </a>
                     <div class="box-info">
-                        <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
-                        </time>
                         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                             <h2 class="post-title">
                                 {{ post.title }}
@@ -130,6 +84,7 @@ layout: compress
                     </div>
                 </div>
             </article>
+        {% endunless %}
         {% endif %}
         {% endfor %}
     </section>
@@ -138,3 +93,9 @@ layout: compress
         {% include pagination-home.html %}
     {% endif %}
 </main>
+
+    {% include scripts.html %}
+    <script src="{{ site.url }}/assets/js/wow.min.js"></script>
+    <script type="text/javascript">(new WOW).init();</script>
+</body>
+</html>
