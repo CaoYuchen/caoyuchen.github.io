@@ -11,7 +11,7 @@
 ;( function( window ) {
     
     'use strict';
-    
+
     var docElem = window.document.documentElement;
 
     function getViewportH() {
