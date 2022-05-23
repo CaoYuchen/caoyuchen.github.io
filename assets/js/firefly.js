@@ -1,5 +1,5 @@
 
-var total=80,container=document.getElementById('container'),w=window.innerWidth,h=window.innerHeight,Tweens=[],SPs=1;
+var total=120,container=document.getElementById('firefly-container'),w=window.innerWidth,h=window.innerHeight,Tweens=[],SPs=1;
 
 for (var i=total;i--;){ 
 	var Div=document.createElement('div');
@@ -14,7 +14,6 @@ function Anim(elm){
 function R(max){return Math.random()*max};
  
 // document.getElementById('playbtn').addEventListener('click',Play);
-// document.addEventListener('DOMContentLoaded', Play); 
 
 function Play(){
 	if(SPs){for(var i=total;i--;){Tweens[i].Tween.pause()}; SPs=0;}
@@ -23,3 +22,4 @@ function Play(){
 
 window.addEventListener("resize",resize);
 function resize(){w=window.innerWidth;  h=window.innerHeight;};
+

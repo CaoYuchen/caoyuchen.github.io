@@ -1,0 +1,21 @@
+.dot{
+  width:3px;
+  height:3px;
+  position:absolute;
+  background-color:#ffae00;
+  box-shadow:0px 0px 10px 2px orange ;
+  border-radius: 20px;
+  z-index:2;
+}
+
+#firefly-container {
+  width:100%; 
+  height:100%;
+  position: fixed;
+}
+
+@media only screen and (max-width : 480px) {
+  #firefly-container{
+    display: none;
+  }
+}
