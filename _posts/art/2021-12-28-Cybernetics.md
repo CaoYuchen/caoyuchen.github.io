@@ -6,7 +6,9 @@ description: This is a dynamic self-balanced system based on vector field, the p
 image: vectorField.gif
 optimized_image: vectorField.gif
 video: 
-videoID: 
+videoID:
+href: https://github.com/CaoYuchen/Cybernetic
+github: https://github.com/CaoYuchen/Cybernetic
 tags:
   - shape grammar
   - animation

@@ -7,6 +7,8 @@ image:
 optimized_image: 
 video: https://www.youtube.com/embed/MYTMJihWAEs
 videoID: MYTMJihWAEs
+
+github: https://github.com/gcwhitfield/Advanced-Game-Studio-Game
 tags:
   - game
   - assymetric

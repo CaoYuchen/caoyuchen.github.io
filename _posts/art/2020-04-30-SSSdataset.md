@@ -7,6 +7,8 @@ image:
 optimized_image: 
 video: https://www.youtube.com/embed/3vrjjfpUNiM
 videoID: 3vrjjfpUNiM
+web: http://mpl.sist.shanghaitech.edu.cn/SSSBenchmark/SSS@MPL.html
+github: https://github.com/CaoYuchen/SSS-dataset
 tags:
   - rendering
   - dataset

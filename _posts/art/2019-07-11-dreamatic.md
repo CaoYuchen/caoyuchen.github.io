@@ -6,6 +6,7 @@ description: A short film for propaganda of a concept product in the future -- D
 optimized_image: 
 video: https://www.youtube.com/embed/BuGByuTweKs
 videoID: BuGByuTweKs
+web: https://caoyuchen.github.io/Dreamatic/
 tags:
   - filmmaking
 ---
