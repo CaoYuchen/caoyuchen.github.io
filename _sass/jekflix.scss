@@ -423,10 +423,10 @@ body.light:not(.main-page) {
       .video-container{
         position: relative;
         padding-bottom: 56.25%;
-      }
-      iframe{
-        position: absolute;
-        z-index: 2;
+        iframe{
+          position: absolute;
+          z-index: 2;
+        }
       }
 
       .new-post-tag {
