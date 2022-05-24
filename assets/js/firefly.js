@@ -1,5 +1,5 @@
 
-var total=120,container=document.getElementById('firefly-container'),w=window.innerWidth,h=window.innerHeight,Tweens=[],SPs=1;
+var total=50,container=document.getElementById('firefly-container'),w=window.innerWidth,h=window.innerHeight,Tweens=[],SPs=1;
 
 for (var i=total;i--;){ 
 	var Div=document.createElement('div');
