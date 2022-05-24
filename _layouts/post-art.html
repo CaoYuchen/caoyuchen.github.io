@@ -33,12 +33,12 @@ layout: compress
         {% assign featured = post %}
         {% endif %}
         {% endfor %}
-        <section class="hero" style="background-image: url({{ featured.image }})">
+        <section class="hero" style="background-image: url(/assets/img/{{ featured.image }})">
             <div class="pixels"></div>
             <div class="gradient"></div>
             <div class="content-art">
                 <h1 class="title-art">{{ featured.title }}</h1>
-                <p class="description-art">{{ featured.subtitle }}</p>
+                <p class="description-art">{{ featured.description }}</p>
             </div>
         </section>
         {% endif %}
@@ -49,34 +49,38 @@ layout: compress
                 {% if post.path contains 'art' %}
                 {% unless post.hero %}
                     <article class="box-item">
-                        <span class="category">
-                            <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
+<!--                         <span class="category">
+                            <a>
                                 <span>{{ post.category }}</span>
                             </a>
-                        </span>
+                        </span> -->
                         <div class="box-body">
-                            <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
+                            <a class="cover">
                                 {% if post.optimized_image %}
-                                    <img src="{{ post.optimized_image }}" width="100%" data-url="{{ post.optimized_image }}" class="preload">
+                                    <img src="/assets/img/{{ post.optimized_image }}" width="100%" data-url="/assets/img/{{ post.optimized_image }}" class="preload">
                                 {% elsif post.image %}
-                                    <img src="{{ post.image }}" width="100%" data-url="{{ post.image }}" class="preload">
+                                    <img src="/assets/img/{{ post.image }}" width="100%" data-url="/assets/img/{{ post.image }}" class="preload">
+                                {% elsif post.video %}
+                                <div class="video-container">
+                                    <iframe src="{{ post.video }}?version=3&autoplay=1&mute=1&loop=1&showinfo=0&rel=0&playlist={{ post.videoID }}" height="100%" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                                 {% else %}
                                     <img src="/assets/img/off.jpg" width="100%" data-url="/assets/img/off.jpg" class="preload">
                                 {% endif %}
                             </a>
                             <div class="box-info">
-                                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                                <a class="post-link">
                                     <h2 class="post-title-art">
                                         {{ post.title }}
                                     </h2>
                                 </a>
-                                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                                <a class="post-link">
                                     <p class="description-art">{{ post.description }}</p>
                                 </a>
                                 <div class="tags">
                                     {% for tag in post.tags %}
                                         {% if tag != "" %}
-                                            <a href="{{ site.baseurl}}/tags/#{{tag | slugify }}">#{{ tag }}</a>
+                                            <a>#{{ tag }}</a>
                                         {% endif %}
                                     {% endfor %}
                                 </div>
@@ -88,14 +92,8 @@ layout: compress
                 {% endfor %}
             </section>
         </div>
-        <!-- Pagination -->
-<!--         {% if site.paginate %}
-            {% include pagination-home.html %}
-        {% endif %} -->
     </main>
 
     {% include scripts.html %}
-    <script src="{{ site.url }}/assets/js/wow.min.js"></script>
-    <script type="text/javascript">(new WOW).init();</script>
 </body>
 </html>
