@@ -10,4 +10,5 @@ videoID:
 music: "1255409830"
 tags:
   - synthesized music
+  - pure music
 ---
