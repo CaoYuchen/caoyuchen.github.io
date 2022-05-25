@@ -55,7 +55,7 @@ layout: compress
                             </a>
                         </span> -->
                         <div class="box-body">
-                            <a class="cover">
+                            <a class="cover" {% if post.href %} href="{{ post.href }}" target="_blank" {% endif %}>
                                 {% if post.optimized_image %}
                                     <img src="/assets/img/{{ post.optimized_image }}" width="100%" data-url="/assets/img/{{ post.optimized_image }}" class="preload">
                                 {% elsif post.image %}
@@ -63,6 +63,14 @@ layout: compress
                                 {% elsif post.video %}
                                 <div class="video-container">
                                     <iframe src="{{ post.video }}?version=3&autoplay=1&mute=1&loop=1&showinfo=0&rel=0&playlist={{ post.videoID }}" height="100%" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                {% elsif post.music %}
+                                <div class="video-container">
+                                    <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ post.music }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+                                </div>
+                                {% elsif post.website %}
+                                <div class="video-container">
+                                    <iframe  src="{{ post.website }}"></iframe>
                                 </div>
                                 {% else %}
                                     <img src="/assets/img/off.jpg" width="100%" data-url="/assets/img/off.jpg" class="preload">
@@ -75,8 +83,16 @@ layout: compress
                                     </h2>
                                 </a>
                                 <a class="post-link">
-                                    <p class="description-art">{{ post.description }}</p>
+                                    <p class="description-art"><span>{{ post.description }}</span>
+                                        {% if post.github %}
+                                        <a class="link-art" href="{{ post.github }}" target="_blank">[Github]</a>&nbsp;&nbsp;&nbsp;
+                                        {% endif %}
+                                        {% if post.web %}
+                                        <a class="link-art" href="{{ post.web }}" target="_blank">[Web]</a>&nbsp;&nbsp;&nbsp;
+                                        {% endif %}
+                                    </p>
                                 </a>
+
                                 <div class="tags">
                                     {% for tag in post.tags %}
                                         {% if tag != "" %}

@@ -7,6 +7,9 @@ image: DrDox.png
 optimized_image: DrDox.png
 video: 
 videoID: 
+href: https://poshon.itch.io/drdoxs-quest-for-time
+web: https://poshon.itch.io/drdoxs-quest-for-time
+github: https://github.com/gcwhitfield/DrDoxQuestForTime
 tags:
   - game
   - puzzle

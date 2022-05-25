@@ -6,7 +6,9 @@ description: I like shooting photos of tourism-propaganda landscapes and after-p
 image: photography.png
 optimized_image: photography.png
 video: 
-videoID: 
+videoID:
+href: https://www.instagram.com/joshua_cyc/
+web: https://www.instagram.com/joshua_cyc/
 tags:
   - photography
   - photoshop
