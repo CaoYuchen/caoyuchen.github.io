@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Representations and Benchmarking of Modern Visual SLAM Systems
+title: A RGB-based SLAM Systems
 date: 2018-05-11
 description: # Add post description (optional)
 img: basicSLAM.jpg # Add image post (optional)

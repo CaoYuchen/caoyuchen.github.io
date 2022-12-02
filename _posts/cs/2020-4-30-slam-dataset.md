@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Representations and Benchmarking of Modern Visual SLAM Systems
+title: Dataset and Benchmarking of Modern Visual SLAM Systems
 date: 2020-04-30
 description: # Add post description (optional)
 img: pythonPipeline.png # Add image post (optional)
