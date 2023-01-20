@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weakly Supervisde Object Detection
+title: Weakly Supervised Object Detection
 date: 2022-10-01
 description: # Add post description (optional)
 img: weaklyObject.jpg # Add image post (optional)
