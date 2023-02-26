@@ -2,7 +2,7 @@
 date: 2021-09-01
 layout: post
 title: Photography
-description: I like shooting photos of tourism-propaganda landscapes and after-processed portraits.
+description: These photos are how I see this world.
 image: photography.png
 optimized_image: photography.png
 video: 
