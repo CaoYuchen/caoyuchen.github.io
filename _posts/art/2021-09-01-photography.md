@@ -2,7 +2,7 @@
 date: 2021-09-01
 layout: post
 title: Photography
-description: These photos are how I see this world.
+description: ----- The world in my eyes.
 image: photography.png
 optimized_image: photography.png
 video: 
