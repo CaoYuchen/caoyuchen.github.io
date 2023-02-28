@@ -12,4 +12,4 @@ web: https://www.andrew.cmu.edu/course/16-726-sp22/projects/yuchenca/proj2/index
 ---
 
 
-The project explores the gradient-domain processing in the practice of image blending, tone mapping and non-photorealistic rendering. The method mainly focuses on the Poisson Blending algorithm. The tasks include primary gradient minimization, 4 neighbors based Poisson blending, mixed gradient Poisson blending and gray-scale intensity preserved color2gray method. The whole project is implemented in Python.
+The project explores gradient-domain processing in the practice of image blending, tone mapping, and non-photorealistic rendering. The method mainly focuses on the Poisson Blending algorithm. The tasks include primary gradient minimization, 4 neighbors-based Poisson blending, mixed gradient Poisson blending, and gray-scale intensity preserved color2gray method. The whole project is implemented in Python.

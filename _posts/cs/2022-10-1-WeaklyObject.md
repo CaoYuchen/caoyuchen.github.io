@@ -11,4 +11,4 @@ comments: false
 ---
 
 
-We used ImageNet pre-trained model to give a rough object detection, we first implement an Alex-Net based naive object detection network, and then implemented WSDDN model where the object region proposals is fed into spatial pyramid pooling for both classification and detection. We used ROI Pooling to get feature from Selective Search and implememnted a classifier to get both bounding-boxes and class scores for each region, and then use NMS and get intersection over union to reduce the number of bboxes, fianlly we write mAP and recall to evaluate the model.
+We used ImageNet pre-trained model to give a rough object detection, we first implement an Alex-Net-based naive object detection network and then implemented a WSDDN model where the object region proposals is fed into spatial pyramid pooling for both classification and detection. We used ROI Pooling to get features from Selective Search and implemented a classifier to get both bounding boxes and class scores for each region, and then use NMS and get intersection over union to reduce the number of bboxes, finally we write mAP and recall to evaluate the model.

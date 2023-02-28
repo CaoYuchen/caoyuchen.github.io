@@ -12,4 +12,4 @@ web: https://www.andrew.cmu.edu/course/16-726-sp22/projects/yuchenca/proj3/index
 ---
 
 
-This project implements two famous GAN architecture: DC-GAN and CycleGAN. It is programmed in Pytorch, the major code includes the build-up of discriminator and generator neural network, loss function, forward and backward propagations. It also explores different methods that help GAN generate better results, such as Data Augmentation, Differentiable Augmentation, variance of different lose functions, variance of different discriminators, and implemented in different dataset to check the robustness fo the network.
+This project implements two famous GAN architectures: DC-GAN and CycleGAN. It is programmed in Pytorch, the major code includes the build-up of the discriminator and generator neural network, loss function, and forward and backward propagations. It also explores different methods that help GAN generate better results, such as Data Augmentation, Differentiable Augmentation, the variance of different loss functions, and the variance of different discriminators, and implemented in the different datasets to check the robustness of the network.

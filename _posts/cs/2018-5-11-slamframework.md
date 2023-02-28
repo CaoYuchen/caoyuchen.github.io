@@ -12,4 +12,4 @@ web:
 ---
 
 
-A fundamental SLAM system with tracking, mapping and pose optimization in Matlab. It includes SIFT & Harris feature extraction, 7/8 points, homograph method, and LevenBerg-Marquardt average error for pose optimization.
+A fundamental SLAM system with tracking, mapping, and pose optimization in Matlab. It includes SIFT & Harris feature extraction, 7/8 points, homograph method, and LevenBerg-Marquardt average error for pose optimization.

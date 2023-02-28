@@ -12,4 +12,4 @@ web: https://www.andrew.cmu.edu/course/16-726-sp22/projects/yuchenca/proj4/index
 ---
 
 
-Neural Style Transfer is a vgg-19 based neural network, utilizes regression method MSE for loss function, and the LBFGS for input image(noise) optimization. It only uses the feature extraction part of vgg-19, and only for evaluation purpose(no gradient optimization for these layers), instead, the optimization happens in the loss function and input(two ends). And the loss function consists of two parts, content loss and style loss, we'll implement them separately first, and then combine them together with assigned weights
+Neural Style Transfer is a VGG-19 neural network, that utilizes the regression method MSE for loss function, and the LBFGS for input image(noise) optimization. It only uses the feature extraction part of VGG-19, and only for evaluation purposes (no gradient optimization for these layers), instead, the optimization happens in the loss function and input(two ends). And the loss function consists of two parts, content loss, and style loss, we'll implement them separately first, and then combine them together with assigned weights.
