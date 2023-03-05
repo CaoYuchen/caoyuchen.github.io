@@ -2,7 +2,7 @@
 date: 2022-02-01
 layout: post
 title: Dr.Dox Quest For Time
-description: GGJ 2022 game project, a puzzle game where Dr.Dox is a time traveler seeking for treasures but he has to be careful to not bump into himself in the past to avoid time paradox.
+description: GGJ 2022 game project, is a puzzle game where Dr.Dox is a time traveler seeking treasures but has to be careful not to bump into himself in the past to avoid a time paradox.
 image: DrDox.png
 optimized_image: DrDox.png
 video: 
