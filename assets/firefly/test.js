@@ -1,13 +1,24 @@
-let c = init("canvas"),
-  w = (canvas.width = window.innerWidth),
-  h = (canvas.height = window.innerHeight);
+canvas_name = "canvas_custom"
+let c = init(canvas_name),
+  w = window.innerWidth,
+  h = window.innerHeight;
+
 //initiation
+function init(elemid) {
+  let canvas = document.getElementById(elemid),
+    c = canvas.getContext("2d"),
+    w = (canvas.width = window.innerWidth),
+    h = (canvas.height = window.innerHeight);
+  c.fillStyle = "rgba(30,30,30,1)";
+  c.fillRect(0, 0, w, h);
+  return c;
+}
 
 class firefly{
   constructor(){
     this.x = Math.random()*w;
     this.y = Math.random()*h;
-    this.s = Math.random()*4;
+    this.s = Math.random()*3;
     this.ang = Math.random()*2*Math.PI;
     this.v = this.s*this.s/4;
   }
@@ -21,13 +32,15 @@ class firefly{
     c.arc(this.x,this.y,this.s,0,2*Math.PI);
     c.fillStyle="#ffae00";
     c.fill();
+    c.shadowColor = "orange";
+    c.shadowBlur = 20;
   }
 }
 
-let f = [];
 
+let f = [];
 function draw() {
-  if(f.length < 200){
+  if(f.length < 100){
     for(let j = 0; j < 10; j++){
      f.push(new firefly());
   }
@@ -42,10 +55,10 @@ function draw() {
   }
 }
 
+
 let mouse = {};
 let last_mouse = {};
-
-canvas.addEventListener(
+document.getElementById(canvas_name).addEventListener(
   "mousemove",
   function(e) {
     last_mouse.x = mouse.x;
@@ -56,15 +69,7 @@ canvas.addEventListener(
   },
   false
 );
-function init(elemid) {
-  let canvas = document.getElementById(elemid),
-    c = canvas.getContext("2d"),
-    w = (canvas.width = window.innerWidth),
-    h = (canvas.height = window.innerHeight);
-  c.fillStyle = "rgba(30,30,30,1)";
-  c.fillRect(0, 0, w, h);
-  return c;
-}
+
 
 window.requestAnimFrame = (function() {
   return (
