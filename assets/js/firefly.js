@@ -82,7 +82,7 @@
 
 	function setup() {
 		if (!container) return;
-		container.style.position = 'relative';
+		container.style.position = 'fixed';
 		container.innerHTML = '';
 		createCanvas();
 		initFireflies();
