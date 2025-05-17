@@ -36,7 +36,7 @@
 		this.speed = random(0.5, 1.5);
 		this.angle = random(0, 2 * Math.PI);
 		this.alpha = random(0.4, 1);
-		this.color = `rgba(255,255,200,${this.alpha})`;
+		this.color = `rgba(255,140,0,${this.alpha})`;
 		this.twinkle = random(0.01, 0.03);
 	}
 	Firefly.prototype.move = function() {
@@ -51,14 +51,14 @@
 		// Twinkle
 		this.alpha += this.twinkle * (Math.random() > 0.5 ? 1 : -1);
 		this.alpha = Math.max(0.2, Math.min(1, this.alpha));
-		this.color = `rgba(255,255,200,${this.alpha})`;
+		this.color = `rgba(255,140,0,${this.alpha})`;
 	};
 	Firefly.prototype.draw = function(ctx) {
 		ctx.save();
 		ctx.beginPath();
 		ctx.arc(this.x, this.y, this.radius * 2, 0, 2 * Math.PI, false);
-		ctx.shadowColor = '#ffffcc';
-		ctx.shadowBlur = 16;
+		ctx.shadowColor = 'rgba(255,140,0,0.8)';
+		ctx.shadowBlur = 18;
 		ctx.fillStyle = this.color;
 		ctx.fill();
 		ctx.restore();
