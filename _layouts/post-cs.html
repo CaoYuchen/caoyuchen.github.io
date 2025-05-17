@@ -14,20 +14,20 @@ layout: compress
 </head>
 
 <body>
+    <div id="firefly-container"></div>
     {% include nav.html %}
     <!-- Header -->
     <header class="header" role="banner">
-        <div id="firefly-container"></div>
         <div class="cs-greybackground">
             <div class="wrapper-cs animated fadeIn">
                 <div class="content">
                     <div class="post-title">
                         <h1>{{ page.title }}</h1>
-<!--                         <a class="btn zoombtn" href="{{site.url}}" style="margin: -10px auto">
+                        <!--                         <a class="btn zoombtn" href="{{site.url}}" style="margin: -10px auto">
                             <i class="fa fa-home" style="font-size: 1.2rem;"></i>
                         </a> -->
                     </div>
-    <!--                 <div class="post-list">
+                    <!--                 <div class="post-list">
                         {% for post in site.posts %} 
                             {% if post.project == null %}
                         <ul>
@@ -47,25 +47,28 @@ layout: compress
                     <article class="post wow fadeInLeft" data-wow-duration="1.5s">
                         {% if post.img %}
                         {% capture images %}
-                            {{"/assets/img/" | prepend: site.baseurl | append : post.img}}
+                        {{"/assets/img/" | prepend: site.baseurl | append : post.img}}
                         {% endcapture %}
                         <!-- <img href="{{images}}" class="post-thumbnail" src="{{images}}"> -->
-                        <a class="post-thumbnail" href="{{images}}" style="background-image: url({{images}})" ></a>
+                        <a class="post-thumbnail" href="{{images}}" style="background-image: url({{images}})"></a>
                         {% endif %}
                         <div class="post-content">
-                            <h2 class="post-title-cs"><a href="{{ post.github }}" target="_blank">{{post.title}}</a></h2>
+                            <h2 class="post-title-cs"><a href="{{ post.github }}" target="_blank">{{post.title}}</a>
+                            </h2>
                             {% if post.keywords %}
                             <p class="post-tag">{{post.keywords}}</p>
                             {% endif %}
                             <p>{{ post.content | strip_html | truncatewords: 150 }}</p>
-       <!--                      <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+                            <!--                      <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
                             <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span> -->
                             {% if post.github %}
-                            <a class="post-link" href="{{ post.github }}" target="_blank" rel="noopener noreferrer">[Github]</a>
+                            <a class="post-link" href="{{ post.github }}" target="_blank"
+                                rel="noopener noreferrer">[Github]</a>
                             &nbsp;&nbsp;&nbsp;
                             {% endif %}
                             {% if post.web %}
-                            <a class="post-link" href="{{ post.web }}" target="_blank" rel="noopener noreferrer">[Web]</a>
+                            <a class="post-link" href="{{ post.web }}" target="_blank"
+                                rel="noopener noreferrer">[Web]</a>
                             {% endif %}
                         </div>
                     </article>
@@ -78,7 +81,7 @@ layout: compress
     {% include scripts.html %}
     <script src="{{ site.url }}/assets/js/wow.min.js"></script>
     <script type="text/javascript">
-    (new WOW).init();
+        (new WOW).init();
 
     </script>
 </body>
