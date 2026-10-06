@@ -88,22 +88,10 @@ figcaption {
 }
 
 // links
+// Kept to a single low-specificity selector so components can set their own colors.
 a {
   transition: color .4s;
-  color: $color_shark;
-  &:link {
-  	color: $color_shark;
-  }
-  &:visited {
-  	color: $color_tuatara;
-  }
-  &:hover {
-  	color: $red;
-  }
-  &:active {
-  	transition: color .3s;
-  	color: $maroon;
-  }
+  color: #ffd59a;
 }
 
 // pre and code

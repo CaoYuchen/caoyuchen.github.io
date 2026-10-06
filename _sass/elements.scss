@@ -209,15 +209,19 @@ kbd {
 
 // go up button
 .goup-container {
-    border-radius: 3px !important;
-    border-color: rgba($color_mercury,0.5) rgba($color_bon_jour,0.5) $color_mischka !important;
-    border: 1px solid;
+    right: 20px !important;
+    bottom: 20px !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(14, 14, 18, 0.6) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 	@media #{$small} {
 		display: none !important;
 	}
 }
 .goup-arrow {
-    border-color: transparent transparent $color_tuatara !important;
+    border-color: transparent transparent #fff !important;
 }
 
 // reading time

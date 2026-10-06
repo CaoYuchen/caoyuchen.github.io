@@ -1,16 +1,12 @@
 ---
 layout: compress
 ---
-
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
+<html class="no-js" lang="en">
 <head>
     {% include head.html %}
 </head>
-<body class="main-page light">
+<body class="main-page light art-page">
     {% include nav.html %}
 
 
@@ -37,6 +33,7 @@ layout: compress
             <div class="pixels"></div>
             <div class="gradient"></div>
             <div class="content-art">
+                <p class="eyebrow">Art Portfolio</p>
                 <h1 class="title-art">{{ featured.title }}</h1>
                 <p class="description-art">{{ featured.description }}</p>
             </div>
@@ -55,25 +52,25 @@ layout: compress
                             </a>
                         </span> -->
                         <div class="box-body">
-                            <a class="cover" {% if post.href %} href="{{ post.href }}" target="_blank" {% endif %}>
+                            <a class="cover" {% if post.href %} href="{{ post.href }}" target="_blank" rel="noopener noreferrer" {% endif %}>
                                 {% if post.optimized_image %}
-                                    <img src="/assets/img/{{ post.optimized_image }}" width="100%" data-url="/assets/img/{{ post.optimized_image }}" class="preload">
+                                    <img src="/assets/img/{{ post.optimized_image }}" width="100%" data-url="/assets/img/{{ post.optimized_image }}" class="preload" loading="lazy">
                                 {% elsif post.image %}
-                                    <img src="/assets/img/{{ post.image }}" width="100%" data-url="/assets/img/{{ post.image }}" class="preload">
+                                    <img src="/assets/img/{{ post.image }}" width="100%" data-url="/assets/img/{{ post.image }}" class="preload" loading="lazy">
                                 {% elsif post.video %}
                                 <div class="video-container">
-                                    <iframe src="{{ post.video }}?version=3&autoplay=1&mute=1&loop=1&showinfo=0&rel=0&playlist={{ post.videoID }}" height="100%" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe loading="lazy" src="{{ post.video }}?version=3&autoplay=1&mute=1&loop=1&showinfo=0&rel=0&playlist={{ post.videoID }}" height="100%" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                                 {% elsif post.music %}
                                 <div class="video-container">
-                                    <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ post.music }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+                                    <iframe loading="lazy" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ post.music }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
                                 </div>
                                 {% elsif post.website %}
                                 <div class="video-container">
-                                    <iframe  src="{{ post.website }}"></iframe>
+                                    <iframe loading="lazy" src="{{ post.website }}"></iframe>
                                 </div>
                                 {% else %}
-                                    <img src="/assets/img/off.jpg" width="100%" data-url="/assets/img/off.jpg" class="preload">
+                                    <img src="/assets/img/off.jpg" width="100%" data-url="/assets/img/off.jpg" class="preload" loading="lazy">
                                 {% endif %}
                             </a>
                             <div class="box-info">
@@ -85,10 +82,10 @@ layout: compress
                                 <a class="post-link">
                                     <p class="description-art"><span>{{ post.description }}</span>
                                         {% if post.github %}
-                                        <a class="link-art" href="{{ post.github }}" target="_blank">[Github]</a>&nbsp;&nbsp;&nbsp;
+                                        <a class="link-art" href="{{ post.github }}" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a>
                                         {% endif %}
                                         {% if post.web %}
-                                        <a class="link-art" href="{{ post.web }}" target="_blank">[Web]</a>&nbsp;&nbsp;&nbsp;
+                                        <a class="link-art" href="{{ post.web }}" target="_blank" rel="noopener noreferrer">Website &nearr;</a>
                                         {% endif %}
                                     </p>
                                 </a>
@@ -109,6 +106,12 @@ layout: compress
             </section>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <a href="{{ site.url }}/">&larr; Home</a>
+        <span>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</span>
+        <a href="{{ site.url }}/cs/">Computer science &rarr;</a>
+    </footer>
 
     {% include scripts.html %}
 </body>

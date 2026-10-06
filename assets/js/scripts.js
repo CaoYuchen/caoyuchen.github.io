@@ -39,9 +39,10 @@ $(document).ready(function() {
         trigger: 500,
         bottomOffset: 10,
         locationOffset: 20,
-        containerRadius: 0,
-        containerColor: '#fff',
-        arrowColor: '#000',
+        containerSize: 44,
+        containerRadius: 22,
+        containerColor: 'rgba(14, 14, 18, 0.6)',
+        arrowColor: '#fff',
         goupSpeed: 'normal'
     });
 	$('.image-popup').magnificPopup({
@@ -61,3 +62,45 @@ $(document).ready(function() {
     mainClass: 'mfp-fade'
   });
 });
+
+// Lazy-load background images (CS thumbnails) as they near the viewport
+(function() {
+  var els = document.querySelectorAll('[data-bg]');
+  function show(el) {
+    el.style.backgroundImage = 'url("' + el.getAttribute('data-bg') + '")';
+    el.removeAttribute('data-bg');
+  }
+  if (!('IntersectionObserver' in window)) {
+    Array.prototype.forEach.call(els, show);
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        show(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '300px 0px' });
+  Array.prototype.forEach.call(els, function(el) { observer.observe(el); });
+})();
+
+// Fade sections in as they scroll into view
+(function() {
+  var items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+  if (!('IntersectionObserver' in window) ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    Array.prototype.forEach.call(items, function(el) { el.classList.add('is-visible'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+  Array.prototype.forEach.call(items, function(el) { observer.observe(el); });
+})();

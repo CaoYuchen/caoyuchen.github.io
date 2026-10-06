@@ -2,71 +2,43 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
+<html class="no-js" lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRHWZ5FCSY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    {% include analytics.html %}
 
-      gtag('config', 'G-RRHWZ5FCSY');
-    </script>
-    
     {% include head.html %}
+    <link rel="preload" as="image" href="{{ site.url }}/{{ site.background1 }}">
+    <link rel="preload" as="image" href="{{ site.url }}/{{ site.background2 }}">
 </head>
-<body>
+<body class="home-page">
     {% include nav.html %}
-    <!-- split screen -->
-    <div class="splitview skewed">
-        <div class="panel bottom">
-            <div class="content">
-                <img src="{{ site.url }}/{{ site.background2 }}" alt="Original">
-            </div>
+    <!-- Split view: CS photo on the left, art photo on the right -->
+    <div class="splitview" aria-hidden="true">
+        <div class="panel panel-art">
+            <img src="{{ site.url }}/{{ site.background2 }}" alt="" width="1920" height="1280" fetchpriority="high">
         </div>
-        <div class="panel top">
-            <div class="content">
-                <img src="{{ site.url }}/{{ site.background1 }}" alt="Duotone">
+        <div class="panel panel-cs">
+            <div class="panel-inner">
+                <img src="{{ site.url }}/{{ site.background1 }}" alt="" width="1920" height="1280" fetchpriority="high">
             </div>
         </div>
         <div class="handle"></div>
+        <div class="splitview-shade"></div>
     </div>
-    <!-- Header -->
-    <header class="header flex" role="banner">
-        <div class="container animated fadeIn">
-            <div class="row">
-                    <img src="{{ site.profile }}" class="img-circle animated rotateIn">
-                    <h3 class="title">
-                    	<p style="font-size:1.2rem;font-weight:500">{{ site.title }}</p>
-                    </h3>
-                    <hr class="hr-line">
-                    <h3 class="title">
-                    	<p style="font-size:1rem;font-weight:400">{{ site.bio }}</p>
-                    </h3>
-                    {% include social-links.html %}
-                  <hr class="hr-line">
-                  <h3 class="title">
-                        <a style="font-size:1.2rem;font-weight:450" id ="artButton" class="btn zoombtn" >
-                        Art
-                        </a>
-                        <a style="font-size:1.2rem;font-weight:450" id="csButton" class="btn zoombtn btn-cs" >
-                        CS
-                        </a>
-                         
-<!--                          <a style="font-size:1rem;font-weight:400" class="btn zoombtn" href="{{ site.url }}/about">
-                         Me
-                         </a> -->
-<!--                          <a class="btn zoombtn" href="{{ site.url }}/art">
-                         art-list
-                         </a> -->
-                 </h3>
-            </div>
+
+    <main class="intro" role="main">
+        <div class="intro-card">
+            <img src="{{ site.url }}/{{ site.profile }}" class="intro-avatar" width="84" height="84" alt="Portrait of {{ site.title }}">
+            <h1 class="intro-name">{{ site.title }}</h1>
+            <p class="intro-bio">{{ site.bio | replace: '<br><br>', '<br>' }}</p>
+            {% include social-links.html %}
+            <nav class="intro-paths" aria-label="Choose a side">
+                <a id="artButton" class="path path-art" href="{{ site.url }}/portfolio/">Art</a>
+                <a id="csButton" class="path path-cs" href="{{ site.url }}/cs/">CS</a>
+            </nav>
         </div>
-    </header>
+    </main>
     {% include scripts.html %}
+    <script src="{{ site.url }}/assets/js/splitScreen.js?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>

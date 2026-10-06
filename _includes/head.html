@@ -33,8 +33,10 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0c">
+    <meta name="color-scheme" content="dark">
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css?v={{ site.time | date: '%s' }}">
     <!-- JS -->
     <script src="{{ site.url }}/assets/js/modernizr-3.3.1.custom.min.js"></script>
     <!-- Favicons -->
@@ -45,24 +47,26 @@
     <link rel="shortcut icon" type="image/png" href="{{ site.url }}/assets/img/favicons/JR-T-32x32.png" />
     <link rel="shortcut icon" href="{{ site.url }}/assets/img/favicons/JR-T.ico" />
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700" rel="stylesheet">
+    <!-- Fonts: Apple system font stack, no web font download -->
     <!-- Background Image -->
     {% if site.background %}
     {% capture background %}{{ site.background }}{% endcapture %}
     {% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.url }}/{{ background }}{% endcapture %}{% endunless %}
-    <style type="text/css">body {background-image:url({{ background }}); {% unless site.tiled_bg %} background-repeat: no-repeat; background-size: cover; {% endunless %}}</style>
+    <style>:root{--page-bg:url("{{ background }}")}</style>
     {% endif %}
 
     {% if page.tags contains "cs" and site.background1%}
     {% capture background1 %}{{ site.background1 }}{% endcapture %}
     {% unless background1 contains 'http://' or background1 contains 'https://' %}{% capture background1 %}{{ site.url }}/{{ background1 }}{% endcapture %}{% endunless %}
-    <style type="text/css">body {background-image:url({{ background1 }}); {% unless site.tiled_bg %} background-repeat: no-repeat; background-size: cover; {% endunless %}}</style>
+    <link rel="preload" as="image" href="{{ background1 }}">
+    <style>:root{--page-bg:url("{{ background1 }}")}</style>
     {% endif %}
 
     {% if page.tags contains "art" and site.background2%}
     {% capture background2 %}{{ site.background2 }}{% endcapture %}
     {% unless background2 contains 'http://' or background2 contains 'https://' %}{% capture background2 %}{{ site.url }}/{{ background2 }}{% endcapture %}{% endunless %}
-    <style type="text/css">body {background-image:url({{ background2 }}); {% unless site.tiled_bg %} background-repeat: no-repeat; background-size: cover; {% endunless %}}</style>
+    <link rel="preload" as="image" href="{{ background2 }}">
+    <style>:root{--page-bg:url("{{ background2 }}")}</style>
     {% endif %}
 
 

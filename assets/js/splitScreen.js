@@ -1,63 +1,69 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var movewindow = document.querySelector('.header'),
-        parent = document.querySelector('.splitview');
+// Home page split view: the diagonal follows the pointer with easing.
+// The divider position lives in one CSS variable (--split, 0–1 of the
+// viewport width) that only drives transforms, so moving it never triggers
+// layout or repaint.
+(function () {
+    'use strict';
 
-    if(parent){
-        var topPanel = parent.querySelector('.top'),
-            handle = parent.querySelector('.handle'),
-            skewHack = 0,
-            delta = 0;
+    var view = document.querySelector('.splitview');
+    if (!view) return;
 
+    var csButton = document.getElementById('csButton');
+    var artButton = document.getElementById('artButton');
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        // If the parent has .skewed class, set the skewHack var.
-        if (parent.className.indexOf('skewed') != -1) {
-            skewHack = 1000;
-        }
+    var target = 0.5, current = 0.5, ease = 0.1, raf = 0, leaving = false;
 
-        movewindow.addEventListener('mousemove', function(event) {
-            // Get the delta between the mouse position and center point.
-            delta = (event.clientX - window.innerWidth / 2) * 0.5;
+    function render() {
+        current += (target - current) * ease;
+        if (Math.abs(target - current) < 0.0005) current = target;
+        view.style.setProperty('--split', current.toFixed(4));
 
-            // Move the handle.
-            handle.style.left = event.clientX + delta + 'px';
+        var csSide = current >= 0.5;
+        if (csButton) csButton.classList.toggle('is-active', csSide);
+        if (artButton) artButton.classList.toggle('is-active', !csSide);
 
-            // Adjust the top panel width.
-            topPanel.style.width = event.clientX + skewHack + delta + 'px';
+        raf = current === target ? 0 : requestAnimationFrame(render);
+    }
 
-            if(delta>=0){
-                $("#csButton").addClass("btn-cs");
-                $("#artButton").removeClass("btn-art");
-            }
-            else{
-                $("#csButton").removeClass("btn-cs");
-                $("#artButton").addClass("btn-art");
-            }
+    function moveTo(value, speed) {
+        target = value;
+        ease = reducedMotion ? 1 : speed;
+        if (!raf) raf = requestAnimationFrame(render);
+    }
+
+    // Same mapping as before: the divider runs a little ahead of the pointer,
+    // so either photo can be revealed almost fully.
+    window.addEventListener('pointermove', function (e) {
+        if (leaving || e.pointerType !== 'mouse') return;
+        var x = e.clientX / window.innerWidth;
+        moveTo(Math.min(0.97, Math.max(0.03, 0.5 + (x - 0.5) * 1.5)), 0.1);
+    }, { passive: true });
+
+    function leaveTo(button, value) {
+        if (!button) return;
+        button.addEventListener('click', function (e) {
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+            e.preventDefault();
+            leaving = true;
+            document.body.classList.add('is-leaving');
+            moveTo(value, 0.14);
+            var href = button.getAttribute('href');
+            setTimeout(function () { window.location.href = href; }, reducedMotion ? 0 : 650);
         });
+    }
 
-        $("#csButton").click(function(){
-            handle.style.transition = "all 0.5s ease-out";
-            topPanel.style.transition = "all 0.5s ease-out";
-            // Move the handle.
-            handle.style.left = window.innerWidth * 1.2 + 'px';
-            // Adjust the top panel width.
-            topPanel.style.width = window.innerWidth * 1.2 + skewHack + 'px';
+    // CS lives on the left photo; sweeping right reveals it fully.
+    leaveTo(csButton, 1.6);
+    leaveTo(artButton, -0.6);
 
-            setTimeout(function () {
-                window.location="/cs";
-            }, 500);
-        });
+    // Coming back via the browser's back button restores the page from cache.
+    window.addEventListener('pageshow', function (e) {
+        if (!e.persisted) return;
+        leaving = false;
+        document.body.classList.remove('is-leaving');
+        moveTo(0.5, 0.2);
+    });
 
-        $("#artButton").click(function(){
-            handle.style.transition = "all 0.5s ease-out";
-            topPanel.style.transition = "all 0.5s ease-out";
-            // Move the handle.
-            handle.style.left = -window.innerWidth * 0.2 + 'px';
-            // Adjust the top panel width.
-            topPanel.style.width = -window.innerWidth * 0.2 + skewHack + 'px';
-
-            setTimeout(function () {
-                window.location="/portfolio";
-            }, 500);
-        });
-    }   
-});
+    render();
+})();
