@@ -248,6 +248,16 @@ body::before {
     @media #{$small} {
         padding: 30px 22px 24px;
     }
+
+    // Touch devices: the photos keep drifting behind the card, so use
+    // frostier glass to keep the text crisp.
+    @media (hover: none) {
+        @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+            background: linear-gradient(160deg, rgba(40, 40, 48, 0.42), rgba(14, 14, 18, 0.5));
+            -webkit-backdrop-filter: blur(16px) saturate(170%);
+            backdrop-filter: blur(16px) saturate(170%);
+        }
+    }
 }
 
 @keyframes intro-in {
@@ -668,6 +678,26 @@ body::before {
                 color: rgba(245, 245, 247, 0.72);
                 color: rgba(255, 255, 255, 0.78);
             }
+        }
+    }
+
+    .art-outro {
+        height: 85vh;
+        height: 85svh;
+        margin-bottom: -96px; // let the photo continue under the footer
+        background: linear-gradient(180deg, rgba(10, 10, 12, 0.9) 0%, rgba(10, 10, 12, 0.55) 22%, rgba(10, 10, 12, 0) 55%);
+    }
+
+    .site-footer {
+        max-width: none;
+        padding-top: 120px;
+        border-top: 0;
+        background: linear-gradient(0deg, rgba(10, 10, 12, 0.85), rgba(10, 10, 12, 0));
+        text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+
+        @media #{$notsmall} {
+            padding-left: 8%;
+            padding-right: 8%;
         }
     }
 

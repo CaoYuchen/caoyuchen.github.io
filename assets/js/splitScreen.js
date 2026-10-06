@@ -11,8 +11,11 @@
     var csButton = document.getElementById('csButton');
     var artButton = document.getElementById('artButton');
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Phones and tablets have no cursor to follow, so the divider drifts instead.
+    var canDrift = window.matchMedia('(hover: none)').matches && !reducedMotion;
+    var DRIFT_PERIOD = 10; // seconds per full sway
 
-    var target = 0.5, current = 0.5, ease = 0.1, raf = 0, leaving = false;
+    var target = 0.5, current = 0.5, ease = 0.1, raf = 0, driftRaf = 0, leaving = false;
 
     function render() {
         current += (target - current) * ease;
@@ -30,6 +33,20 @@
         target = value;
         ease = reducedMotion ? 1 : speed;
         if (!raf) raf = requestAnimationFrame(render);
+    }
+
+    function drift(now) {
+        if (leaving) {
+            driftRaf = 0;
+            return;
+        }
+        var t = now / 1000;
+        moveTo(0.5 + 0.2 * Math.sin((t / DRIFT_PERIOD) * Math.PI * 2), 0.08);
+        driftRaf = requestAnimationFrame(drift);
+    }
+
+    function startDrift() {
+        if (canDrift && !driftRaf) driftRaf = requestAnimationFrame(drift);
     }
 
     // Same mapping as before: the divider runs a little ahead of the pointer,
@@ -63,7 +80,9 @@
         leaving = false;
         document.body.classList.remove('is-leaving');
         moveTo(0.5, 0.2);
+        startDrift();
     });
 
     render();
+    startDrift();
 })();
